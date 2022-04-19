@@ -1,13 +1,16 @@
 /**index.wxss**/
 .container {
   background-color: #eee;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-} 
+  height: 70vh;
+  text-align: center;
+}
+text{
+  display: block;
+}
+image,text{
+  margin-bottom: 60px;
 
+}
 .userinfo {
   display: flex;
   flex-direction: column;
