@@ -4,7 +4,7 @@
        src="https://ossweb-img.qq.com/upload/adw/image/977/20220415/5aaa100694b5558035baea4a897da9ea.jpeg"
        mode="scaleToFill"
    />
-    <text></text>
+    <text>{{message}}</text>
     <text>每周推荐一部分好片</text>
     <text>我的微博</text>
 </view>
