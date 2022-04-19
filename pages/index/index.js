@@ -4,6 +4,8 @@ const app = getApp()
 
 Page({
   data: {
+    "title":'健康宝',
+    "bigtitle":'大状态检查',
     motto: 'Hello Xueyue',
     message:'binggo',
     weibo:'我的微博',

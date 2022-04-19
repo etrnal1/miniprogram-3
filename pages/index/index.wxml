@@ -1,9 +1,10 @@
 <view class="container">
-   <text>逻辑值班</text>
+   <text>{{title}}</text>
    <image
        src="https://ossweb-img.qq.com/upload/adw/image/977/20220415/5aaa100694b5558035baea4a897da9ea.jpeg"
        mode="scaleToFill"
    />
+   <text>{{bigtitle}}</text>
     <text>{{message}}</text>
     <text>{{weibo}}</text>
     <text>{{movie}}</text>
