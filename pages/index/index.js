@@ -5,6 +5,9 @@ const app = getApp()
 Page({
   data: {
     motto: 'Hello Xueyue',
+    message:'binggo',
+    weibo:'我的微博',
+    movie:'狼的男人',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),

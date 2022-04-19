@@ -5,6 +5,6 @@
        mode="scaleToFill"
    />
     <text>{{message}}</text>
-    <text>每周推荐一部分好片</text>
-    <text>我的微博</text>
+    <text>{{weibo}}</text>
+    <text>{{movie}}</text>
 </view>
