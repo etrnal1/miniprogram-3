@@ -26,7 +26,12 @@
 5. Align-iteems 设置多行
 6. Flex-row
 
-### 布局示例子
+
+        解除SSL验证：git config --global http.sslVerify “false”
+        再次 git push 即可
+
+
+### 布局例子
 
 ```css
 .container{
