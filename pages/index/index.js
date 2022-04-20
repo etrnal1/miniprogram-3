@@ -9,13 +9,14 @@ Page({
     motto: 'Hello Xueyue',
     message:'binggo',
     weibo:'我的微博',
-    movie:'狼的男人',
+    movie:'',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     canIUseGetUserProfile: false,
     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
   },
+
   // 事件处理函数
   bindViewTap() {
     wx.navigateTo({

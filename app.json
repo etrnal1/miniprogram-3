@@ -8,9 +8,12 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "考勤系统",
     "navigationBarTextStyle":"black"
   }, 
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index"
+  },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

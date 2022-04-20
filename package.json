@@ -1,0 +1,23 @@
+{
+  "name": "weui-miniprogram",
+  "version": "1.0.0",
+  "description": "bao",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etrnal1/miniprogram-3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/etrnal1/miniprogram-3/issues"
+  },
+  "homepage": "https://github.com/etrnal1/miniprogram-3#readme",
+  "dependencies": {
+    "@vant/weapp": "^1.10.2",
+    "weui-miniprogram": "^1.2.3"
+  }
+}
