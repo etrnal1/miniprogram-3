@@ -2,6 +2,7 @@
   "pages":[
   
     "pages/index/index",
+    "pages/history/history",
     "pages/logs/logs"
 
   ],
@@ -11,9 +12,23 @@
     "navigationBarTitleText": "考勤系统",
     "navigationBarTextStyle":"black"
   }, 
+
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/book.png"
+   
+    },{
+      "pagePath": "pages/history/history",
+      "text": "菜单栏",
+      "iconPath": "images/love.png"
+  
+    }]
+  },
   "usingComponents": {
     "van-button": "@vant/weapp/button/index"
   },
-  "style": "v2",
+
   "sitemapLocation": "sitemap.json"
 }
