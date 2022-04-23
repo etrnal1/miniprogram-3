@@ -1,0 +1,6 @@
+<!--pages/swiper/swiper.wxml-->
+<text>pages/swiper/swiper.wxml</text>
+<view>
+  <button bindtap="handleAjax()">ajax-swiper</button>
+</view>
+

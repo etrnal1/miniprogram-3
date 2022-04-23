@@ -1,0 +1,7 @@
+/* pages/scroll_view/scroll_view.wxss */
+.box{
+    height: 300px;
+}
+.item{
+    height: 500px;
+}

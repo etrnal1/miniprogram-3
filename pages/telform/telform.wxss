@@ -1,0 +1,17 @@
+/* pages/telform/telform.wxss */
+.box{
+    margin-top: 5%;
+    text-align: center;
+    display: flex;
+}
+/* view{
+    margin-top: 10rpx;
+} */
+van-field{
+    padding: 30rpx;
+    overflow: hidden;
+    float: left;
+}
+van-button{
+    float: left;
+}

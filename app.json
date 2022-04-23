@@ -2,32 +2,50 @@
   "pages":[
   
     "pages/index/index",
-    "pages/history/history",
+    "pages/swi/swi",
+    "pages/scroll_view/scroll_view",
+    "pages/auth/auth",
+    "pages/telform/telform",
     "pages/logs/logs"
 
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "考勤系统",
+    "navigationBarTitleText": "热门电影",
     "navigationBarTextStyle":"black"
   }, 
 
   "tabBar": {
     "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页",
+      
+      "pagePath":"pages/swi/swi",
+      "text": "热门演出",
       "iconPath": "images/book.png"
    
     },{
-      "pagePath": "pages/history/history",
-      "text": "菜单栏",
-      "iconPath": "images/love.png"
+      "pagePath": "pages/index/index",
+      "text": "热门电影",
+      "iconPath": "images/fly.png"
   
-    }]
+    },{
+      "pagePath":"pages/scroll_view/scroll_view",
+      "text": "我的",
+      "iconPath": "images/fly.png" 
+   
+    }
+   ]
   },
   "usingComponents": {
-    "van-button": "@vant/weapp/button/index"
+    "van-button": "@vant/weapp/button/index",
+    "van-icon":"@vant/weapp/icon/index",
+    "van-cell":"@vant/weapp/cell/index",
+    "van-calendar":"@vant/weapp/calendar/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-field": "@vant/weapp/field/index"
+
+    
   },
 
   "sitemapLocation": "sitemap.json"

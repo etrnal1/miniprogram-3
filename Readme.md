@@ -119,15 +119,62 @@ console.log("input",evt.detail)
 
 
 
+### evt 没有跨域限制
+
+数据请求
+
+​	wx.request   
+
+Fail:()=>{}
+
+Fail:()=>{}
+
+Fail:()=>{}
+
+```web-idl
+ wx.request({
+       url: 'https://www.baidu.com',
+       success: function(res) {
+         console.log(res.data)
+       }
+       ,
+       fail:()=>{
+         console.log(fail)
+       }
+     })
+```
 
 
 
 
-div 
 
-​	div 失去效用 
+## Image
 
-   绑定在属性上
+​	widthFix
+
+
+
+```
+image.replace("/w.h","")+@11_1e_1c_128w_180h
+```
+
+
+
+```css
+.item{
+  overflow:hidden;
+}
+```
+
+## 轮播图
+
+swipe
+
+- swiper 默认高度是150px 应该设置为314rpx 
+- Autoplay 
+- interval="3000"  设置时间为3000 毫秒  
+
+
 
   
 
@@ -141,3 +188,120 @@ div
 
 <input class='input' placeholder='please input'/>
 <input  class="input" placeholder="please input">
+
+
+
+
+
+### 封装request
+
+```js
+function request(){
+	return new Promise((resolve,reject)=>{
+		wx.request({
+      url:'url',
+      success:(res)=>{
+        resolve(res.data)
+      },
+      fail:(err)=>{
+        reject(err)
+		
+		})
+	
+	})
+}
+```
+
+#### import from
+
+​	import from
+
+```js
+request({
+  url:'http://localhost:50000/users'
+}).then(res=>{
+  console.log(res)
+})
+```
+
+### OnReady
+
+### OnReachBotton(上拉触底)
+
+总数据可能在header  头里面
+
+#### Wx.request
+
+Header 属性存在该值
+
+X-total-count:16
+
+### 懒加载
+
+```
+# 数组的长度
+if( ==){
+
+}
+```
+
+
+
+### stopPullDownRefresh()
+
+```
+setTimeout(()=>{
+	wx.stopPullDownRefresh()  //停止下拉刷新
+},1000)
+```
+
+### 使用组件
+
+
+
+#### 新建
+
+#### 引用
+
+### 获取用户授权
+
+- ​	  获取用户信息
+- ​    跳转页面
+
+```js
+##获取微信用户信息
+wx.getUserProfile ({
+	desc:'desc',
+	success:(res)=>	{
+			console.log(res)
+	
+	}
+}) 
+```
+
+```js
+#进行跳转网页
+wx.navigateTo({
+	url:""
+})
+```
+
+```js
+#存储用户信息
+wx.setStorageSync('token','res.userInfo')
+```
+
+### vant weapp 引用 
+
+```
+ <van-field
+      value="{{ value }}"
+      placeholder="请输入用户名"
+      border="{{ false }}"
+      bind:change="onChange"
+    />
+```
+
+
+
+### Nom

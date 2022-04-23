@@ -1,0 +1,66 @@
+<swiper
+  class=""
+  indicator-dots="true"
+  autoplay="true"
+  interval="3000"
+  circular="false"
+>
+  <swiper-item
+    class=""
+    item-id=""
+    wx:for="{{movie}}"
+    wx:key="index"
+  >
+    <image
+      src="{{item.pic}}"
+      mode="widthFix"
+      style="width:100%"
+    >
+    </image>
+  </swiper-item>
+
+</swiper>
+<view
+  class=""
+  hover-class="none"
+  hover-stop-propagation="false"
+>
+
+  <view
+    wx:for="{{movies}}"
+    wx:key="index"
+    class="actor"
+  >
+
+    <image
+      class=""
+      src="{{item.pic}}"
+      mode="widthFix"
+      lazy-load="false"
+      style="width:30%"
+    >
+
+    </image>
+    <view class="info" style="margin-left:20px">
+      <view>
+        {{item.name}}
+
+      </view>
+      <view>
+        演出时间：{{item.start_show_time}}
+      </view>
+      <view style="color:orange">
+        {{item.support_desc}}
+
+      </view>
+      <view style="color:rgba(255, 0, 13, 0.381)">
+        ￥{{item.max_price}} 起
+
+      </view>
+
+    </view>
+
+  </view>
+
+</view>
+

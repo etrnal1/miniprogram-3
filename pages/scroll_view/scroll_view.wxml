@@ -1,0 +1,6 @@
+<!-- mp-searchbar  -->
+<!-- <mp-searchbar class="primary"></mp-searchbar> -->
+<van-button bindtap="handleAdd" type="primary">授权</van-button>
+
+<van-button bindtap="handleAdd" type="warn">警告</van-button>
+

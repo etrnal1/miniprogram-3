@@ -1,3 +1,29 @@
-<view class="container">
-  <view>hello</view>
+<wxs src="./image.wxs" module="img_conv"></wxs>
+<!-- <view>
+  <button bindtap="hit" value="热门电影">热门电影</button>
+</view> -->
+<key-search bindevent="handleEvent"></key-search>
+<view
+  wx:for="{{datalist}}"
+  wx:key="index"
+  class="box"
+>
+
+  <image
+    src="{{item.img}}"
+    mode="widthFix"
+    alt=""
+    style="100%"
+  ></image>
+  <view class="bor">
+    <view style="margin-left: 20px;">
+      {{item.nm}}
+    </view>
+    <view>
+      {{item.cat}}
+    </view>
+
+  </view>
+
 </view>
+

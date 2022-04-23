@@ -1,0 +1,14 @@
+/* pages/swi/swi.wxss */
+
+swiper{
+    min-height: 314rpx;
+}
+.actor {
+    padding:20px;
+    overflow: hidden;
+
+}
+.actor image{
+    width:200rpx;
+    float:left;
+}
