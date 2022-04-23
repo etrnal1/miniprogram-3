@@ -1,4 +1,17 @@
 # 小程序开发
+
+## Git 环境准备
+
+```sh
+npm i vant-weapp -S --production
+ssh -T git@github.com
+git config --global user.name mac
+git config --global user.email 192456@qq.com
+Tag Mix -Links 作者：jugujugu https://www.bilibili.com/read/cv6656655/ 出处：bilibili
+```
+
+
+
 ## 目录结构
     app.js    逻辑
     app.json  配置
@@ -57,18 +70,37 @@ Flex-grow
 - Column 靠左 从上到下
 - column-reverse 靠左 从下到上
 
+## 小程序文件
 
+- wxml（html 文件）
+- Wxss(文件样式)
+- js(逻辑部分的文件)
+- Json ()
+- app.js (全局配置文件)
+- app.json(全局陪着文件)
 
-### 小程序组件
+### 小程序语法
 
-- 模版语法
-- 
-
-​	  
+- 模版语法 {{}} [里面支持js 语法]
+- wx:for  w x:key. 
+- js 语法类型
 
 ```html
-<text></text>
 <view>{{ 10>20 ?'aaaa':'bbbb'}}</view>
+<view wx:for="{{datalist}}" wx:key="{{index}}"">{{item}}</view>
+```
+
+
+
+wx.js
+
+```js
+page({
+	#里面写需要传递的数;类似字典键值对[key:value]
+	data:{
+		datalist:[1,2,3]
+	}
+})
 ```
 
 
@@ -87,11 +119,23 @@ wx:if
 
 #### 事件绑定
 
+ Bindtap
+
 ```
 <button type="primary" bindtap="handleTap"></button>
 ```
 
 ### Demo.js
+
+- this.setdata({}). [重新进行数据赋值]
+
+```js
+this.setData({
+
+})
+```
+
+
 
 ```js
 handleTap(){
@@ -117,19 +161,14 @@ capture-bind 绑定事件
 console.log("input",evt.detail)
 ````
 
+### 微信请求(wx.request)
+
+- evt 没有跨域限制
+- 数据请求
 
 
-### evt 没有跨域限制
 
-数据请求
-
-​	wx.request   
-
-Fail:()=>{}
-
-Fail:()=>{}
-
-Fail:()=>{}
+进行请求网址对时候，小程序开发工具勾选不进行域名校验
 
 ```web-idl
  wx.request({
@@ -146,11 +185,10 @@ Fail:()=>{}
 
 
 
-
-
 ## Image
 
-​	widthFix
+- widthFix 
+- overflow:hidden;【进行隐藏float】
 
 
 
@@ -166,7 +204,7 @@ image.replace("/w.h","")+@11_1e_1c_128w_180h
 }
 ```
 
-## 轮播图
+## 轮播图 [swiper 组件]
 
 swipe
 
@@ -181,15 +219,6 @@ swipe
 ```
 
 ```
-
-
-
-## 练习小程序
-
-<input class='input' placeholder='please input'/>
-<input  class="input" placeholder="please input">
-
-
 
 
 
@@ -212,9 +241,9 @@ function request(){
 }
 ```
 
-#### import from
+#### import from [引入其他js 文件的方法]
 
-​	import from
+import from
 
 ```js
 request({
@@ -293,15 +322,13 @@ wx.setStorageSync('token','res.userInfo')
 
 ### vant weapp 引用 
 
+#### 先使用npm安装
+
 ```
  <van-field
       value="{{ value }}"
       placeholder="请输入用户名"
       border="{{ false }}"
       bind:change="onChange"
-    />
+ />
 ```
-
-
-
-### Nom
