@@ -1,11 +1,30 @@
-<!--pages/userinfo/userinfo.wxml-->
-<!--<text>pages/userinfo/userinfo.wxml</text>-->
-<view>
-    <van-button type="primary" bindtap="showuser">展示用户信息</van-button>
+<view class="user">
+    <image src="{{userinfo.avatarUrl}}"></image>
+    <view>用户名: {{userinfo.nickName}}</view>
+    <view>普通用户</view>
+    <view class="userinfo">个人主页</view>
 </view>
+<!--        avatarUrl: "https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKO8cy90Xxe9BZX7BDIh9arZmQURgu8gfWJkNaJhficdPqBtibSfM1dBCG9V0OVHb5VuRvz4Gsib6acw/132"-->
 <view>
-    用户信息展示：{{userinfo.nickName}}<br/>
+    <van-panel title="会员中心" desc="1-30" status="进入">
+        <view>普通用户 距升级只差22成长值</view>
+    </van-panel>
 </view>
-<view> 语言:{{userinfo.language}}</view>
-
-
+<view class="movie">
+    <van-panel title="订单" desc="" status="">
+        <view>电影票</view>
+        <view>演出票</view>
+        <view>在线观看</view>
+        <view>周边</view>
+    </van-panel>
+</view>
+<van-cell-group>
+    <van-cell title="更换头像" value="" size="{{16}}"/>
+    <van-cell title="单元格" value="内容" label="描述信息" border="{{ false }}" />
+</van-cell-group>
+<!--<view>-->
+<!--    我的资产-->
+<!--</view>-->
+<!--<view>-->
+<!--    我的服务-->
+<!--</view>-->
