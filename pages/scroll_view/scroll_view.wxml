@@ -1,6 +1,15 @@
 <!-- mp-searchbar  -->
 <!-- <mp-searchbar class="primary"></mp-searchbar> -->
-<van-button bindtap="handleAdd" type="primary">授权</van-button>
+<van-button
+  bindtap="handleAdd"
+  type="primary"
+  id="info"
+>获取用户信息
+</van-button>
 
-<van-button bindtap="handleAdd" type="warn">警告</van-button>
+<van-dialog id="van-dialog" />
+<van-picker columns="{{ columns }}" bind:change="onChange" />
+<!-- <van-button type="danger">按钮</van-button> -->
+<!--<van-toast id="van-toast"/>-->
+<!--<van-button bindtap="handleAdd" type="warn">警告</van-button>-->
 

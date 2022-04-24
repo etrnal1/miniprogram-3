@@ -5,3 +5,8 @@
 .item{
     height: 500px;
 }
+#info{
+    display: flex;
+    margin-top:120px;
+    /*padding: 150rpx;*/
+}

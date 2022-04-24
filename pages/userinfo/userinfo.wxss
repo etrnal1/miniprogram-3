@@ -1,0 +1,4 @@
+/* pages/userinfo/userinfo.wxss */
+view{
+    display: flex;
+}

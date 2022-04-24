@@ -4,14 +4,25 @@
     text-align: center;
     display: flex;
 }
+.box van-button{
+    margin-left:5px;
+}
 /* view{
     margin-top: 10rpx;
 } */
-van-field{
-    padding: 30rpx;
+.box van-field{
+    padding-left: 30px;
     overflow: hidden;
     float: left;
 }
-van-button{
-    float: left;
+
+.qu {
+    margin-top: 120rpx;
+    /*width:520rpx;*/
+    /*overflow: hidden;*/
+    display: flex;
+    /*maring-left:
+    20rpx;*/
+    /*padding-left: 520px;*/
+    /*margin-left:120px;*/
 }

@@ -33,7 +33,7 @@ Page({
 
 renderGoods(){
   wx.request({
-    url: "https://api.juooo.com/Show/Search/getShowList?page=2&theatre_id=16&category=0&time=1650615707095&version=6.1.68&referer=1&sign=7e829ffe6573f34026f6f39909b91841",
+    url: "https://api.juooo.com/Show/Search/getShowList?page=1&theatre_id=16&category=0&time=1650615707095&version=6.1.68&referer=1&sign=7e829ffe6573f34026f6f39909b91841",
     success:(res)=> {
       console.log(res.data)
       // console.log(url)

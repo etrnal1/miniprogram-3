@@ -1,0 +1,11 @@
+<!--pages/userinfo/userinfo.wxml-->
+<!--<text>pages/userinfo/userinfo.wxml</text>-->
+<view>
+    <van-button type="primary" bindtap="showuser">展示用户信息</van-button>
+</view>
+<view>
+    用户信息展示：{{userinfo.nickName}}<br/>
+</view>
+<view> 语言:{{userinfo.language}}</view>
+
+

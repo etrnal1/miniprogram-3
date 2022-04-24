@@ -1,4 +1,14 @@
 import CheckAuth from "../../utils/auth"
+import Toast from "../../miniprogram_npm/@vant/weapp/toast/toast";
+// import Dialog from "../../miniprogram_npm/@vant/weapp/dialog/dialog";
+// Dialog.alert({
+//   title: '标题',
+//   message: '弹窗内容',
+// }).then(() => {
+//   console.log('close')
+//   // on close
+// })
+
 
 // pages/scroll_view/scroll_view.js
 Page({
@@ -7,8 +17,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // info:''
+    columns:['北京','上海','深圳','河南','广东']
+
   },
+  onChange(event) {
+    const { picker, value, index } = event.detail;
+    // Toast(`当前值：${value}, 当前索引：${index}`);
+    Toast(`当前值：${value}, 当前索引：${index}`);
+  },
+
+
+  // onChange(event){
+  //   const {picker,value,index }= event.detail
+  //   console.log(event.deltail)
+  //   // Toast(`当前值:${value},当前索引${index}`);
+  // },
 
   /**
    * 

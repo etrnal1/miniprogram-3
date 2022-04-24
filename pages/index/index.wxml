@@ -2,28 +2,48 @@
 <!-- <view>
   <button bindtap="hit" value="热门电影">热门电影</button>
 </view> -->
-<key-search bindevent="handleEvent"></key-search>
-<view
-  wx:for="{{datalist}}"
-  wx:key="index"
-  class="box"
->
+<van-dropdown-menu >
+    <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" bind:change="dropdwon"/>
+    <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" />
+</van-dropdown-menu>
 
-  <image
-    src="{{item.img}}"
-    mode="widthFix"
-    alt=""
-    style="100%"
-  ></image>
-  <view class="bor">
-    <view style="margin-left: 20px;">
-      {{item.nm}}
+<!--<view-->
+<!--  wx:for="{{datalist}}"-->
+<!--  wx:key="index"-->
+<!--  class="box"-->
+<!--&gt;-->
+<!--  <image-->
+<!--    src="{{item.img}}"-->
+<!--    mode="widthFix"-->
+<!--    alt=""-->
+<!--    style="100%"-->
+<!--  ></image>-->
+<!--  <view class="bor">-->
+<!--    <view style="margin-left: 20px;">-->
+<!--      {{item.nm}}-->
+<!--    </view>-->
+<!--    <view>-->
+<!--      {{item.cat}}-->
+<!--    </view>-->
+
+<!--  </view>-->
+
+<!--</view>-->
+<view wx:for="{{movielist}}" wx:key="index" class="box">
+    <image
+            src="{{item.img}}"
+            mode="widthFix"
+            alt=""
+            style="50%"
+    ></image>
+    <view class="bor">
+        <view style="margin-left: 20px;">
+            {{item.nm}}
+        </view>
+        <view>
+            {{item.cat}}
+        </view>
+
     </view>
-    <view>
-      {{item.cat}}
-    </view>
-
-  </view>
-
 </view>
 

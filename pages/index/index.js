@@ -5,11 +5,29 @@ const app = getApp()
 
 Page({
   data: {
-    "title":'健康宝',
-    "bigtitle":'大状态检查',
-    motto: 'Hello Xueyue',
+    option1: [
+      { text: '热映', value: 0 },
+     
+      { text: '即将上映', value: 2 },
+      
+    ],
+    option2: [
+      { text: '默认排序', value: 'a' },
+      { text: '距离排序', value: 'b' },
+      { text: '热点排序', value: 'c' }
+    ],
+    options3:[
+      {text:'选择地区',value:'a'},
+      {text:'选择地区',value:'a'},
+      {text:'选择地区',value:'a'}
+    ],
+    value4:'',
+    value1: 0,
+    value2: 'a',
+    value3:  'k',
     message:'binggo',
     datalist:'',
+    movielist:'',
     weibo:'我的微博',
     movie:'',
     userInfo: {},
@@ -17,6 +35,48 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     canIUseGetUserProfile: false,
     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
+  },
+  /**
+   * 触发点击事件
+   */
+  dropdwon(evt){
+    console.log(evt.detail)
+    this.setData({
+      value4:evt.detail
+    })
+    if (evt.detail=='2'){
+      console.log('即将上映')
+      wx.request({
+        url:"https://m.maoyan.com/ajax/comingList?ci=10&token=&limit=10",
+        success: ( res)=>{
+         console.log(res.data)
+          this.setData({
+            movielist:res.data.coming
+          })
+
+        },
+        faile:( )=>{
+
+        }
+      })
+    }else{
+     
+      wx.request({
+        url:"https://i.maoyan.com/api/mmdb/movie/v3/list/hot.json?ct=%E5%8C%97%E4%BA%AC&ci=1&channelId=4",
+        success: ( res)=>{
+         console.log(res.data)
+          this.setData({
+            movielist:res.data.data.hot
+          })
+
+        },
+        faile:( )=>{
+
+        }
+      })
+     
+
+    }
   },
 
    //点击触发事件
@@ -63,12 +123,14 @@ Page({
     }
   },
   onReady(){
+    console.log(this.data.option1.value)
+    console.log(this.data.option1['value'])
     wx.request({
       url: 'https://i.maoyan.com/api/mmdb/movie/v3/list/hot.json?ct=%E5%8C%97%E4%BA%AC&ci=1&channelId=4',
       success: (res)=> {
         console.log(res.data.data.hot)
         this.setData({
-          datalist:res.data.data.hot
+          movielist:res.data.data.hot
         })
       }
       ,
@@ -76,6 +138,28 @@ Page({
         console.log(fail)
       }
     })
+    // wx.request({
+    //   url:'https://i.maoyan.com/ajax/mostExpected?limit=10&offset=0&token=&optimus_uuid=146A2E60C39111ECB9D91741925E401CA020890587F24CCC89FB226E33E26FEA&optimus_risk_level=71&optimus_code=10',
+    //   // url: 'us_uuid=146A2E60C39111ECB9D91741925E401CA020890587F24CCC89FB226E33E26FEA&optimus_risk_level=71&optimus_code=10',
+    //   success: (res)=> {
+    //     console.log(res)
+    //     console.log(res.data)
+    //     console.log('数据展示')
+    //     let comming = res.data.comming
+    //     // console.log(res['success'])
+    //     // console.log(res.data['comming'])
+    //
+    //     // console.log(res.data)
+    //     // console.log(res.coming)
+    //     this.setData({
+    //       movielist:comming
+    //     })
+    //   }
+    //   ,
+    //   fail:()=>{
+    //     console.log('this is fail')
+    //   }
+    // })
   },
   getUserProfile(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗

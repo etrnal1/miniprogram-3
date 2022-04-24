@@ -332,3 +332,12 @@ wx.setStorageSync('token','res.userInfo')
       bind:change="onChange"
  />
 ```
+
+### nginx 证书配置
+
+```
+
+/usr/sbin/nginx -t
+/usr/sbin/nginx /etc/nginx/nginx.conf
+```
+

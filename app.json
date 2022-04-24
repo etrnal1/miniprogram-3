@@ -6,8 +6,8 @@
     "pages/scroll_view/scroll_view",
     "pages/auth/auth",
     "pages/telform/telform",
+    "pages/userinfo/userinfo",
     "pages/logs/logs"
-
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -18,7 +18,6 @@
 
   "tabBar": {
     "list": [{
-      
       "pagePath":"pages/swi/swi",
       "text": "热门演出",
       "iconPath": "images/book.png"
@@ -43,7 +42,11 @@
     "van-calendar":"@vant/weapp/calendar/index",
     "van-popup": "@vant/weapp/popup/index",
     "van-dialog": "@vant/weapp/dialog/index",
-    "van-field": "@vant/weapp/field/index"
+    "van-field": "@vant/weapp/field/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+    "van-dropdown-item": "@vant/weapp/dropdown-item/index"
 
     
   },

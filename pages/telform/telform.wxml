@@ -1,9 +1,9 @@
 <view style="text-align: center;margin-top:50px">
+    <view>信息采集</view>
 
-  信息采集
-  您的手机号会与微信绑定
+    <view>您的手机号会与微信绑定</view>
+
 </view>
-
 <view class="box">
   <!-- <label for="手机号" value="手机号"></label> -->
   <van-cell-group>
@@ -11,12 +11,11 @@
       value="{{ value }}"
       placeholder="请输入手机号"
       border="{{ false }}"
-      bind:change="onChange"
-    />
-
+      bind:change="onChange"></van-field>
   </van-cell-group>
-
   <van-button>获取验证码</van-button>
 </view>
-<van-button type="primary" bindtap="submitForm">确定</van-button>
-
+<view>
+    <van-button type="primary" bindtap="submitForm" style
+     class="qu">确定</van-button>
+</view>

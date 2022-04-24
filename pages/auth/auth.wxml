@@ -1,5 +1,3 @@
 <!--pages/auth/auth.wxml-->
 <text>pages/auth/auth.wxml</text>
 <!-- <van-button type="primary">警告</van-button> -->
-<van-button>11</van-button>
-
