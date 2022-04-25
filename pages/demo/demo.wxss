@@ -1,0 +1,24 @@
+/* pages/demo/demo.wxss
+    flex-direction row 垂直方向是主轴
+
+ */
+.container{
+    display: flex;
+    width: 300px;
+    height: 500px;
+    background-color: deeppink;
+    flex-direction: row;
+}
+pages{
+    height: 500rpx;
+}
+.one{
+    width: 100px;
+    height: 500px;
+    background-color: mediumspringgreen;
+}
+.two{
+    width: 100px;
+    height: 500px;
+    background-color: blueviolet;
+}

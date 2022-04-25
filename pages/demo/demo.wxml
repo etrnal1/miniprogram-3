@@ -1,0 +1,11 @@
+<!--pages/demo/demo.wxml-->
+<view class="container">
+    <view class="one">
+        flex 布局 弹性布局 根据屏幕元素自适应
+    </view>
+    <view class="two">
+        flex 容器
+    </view>
+
+
+</view>
