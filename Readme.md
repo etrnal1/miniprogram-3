@@ -364,4 +364,46 @@ wx.setStorageSync('token','res.userInfo')
  nginx 服务器转发端口
 
 端口对应的目录起相应的服务接口
+### 配置webstorm 不建索引
+选择目录————>选择将目录标记为-->排除
+即为不建立索引
 
+### flex 布局
+
+  flex 弹性盒子
+
+- flex-direction:row
+
+   盒子横向排列
+
+- justify-content
+
+  ​     左对齐
+
+  ​    flex-start
+
+  ​    center 项目居中对齐
+
+  ​    space-between 两边对齐
+
+  ​    space-round 边距离对齐
+
+  - aligin-itemes
+
+      stretch
+
+  
+
+  
+
+  ### 项目属性
+
+  ​      order 属性为0
+
+  ​	  order 数值越小越靠前  排列
+
+  
+
+  - [ ] flex-grow 默认为不分配 默认值为0
+
+  

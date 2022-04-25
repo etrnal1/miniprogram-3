@@ -1,12 +1,13 @@
 {
   "pages":[
-  
+    "pages/demo/demo",
     "pages/index/index",
     "pages/swi/swi",
     "pages/scroll_view/scroll_view",
     "pages/auth/auth",
     "pages/telform/telform",
     "pages/userinfo/userinfo",
+
     "pages/logs/logs"
   ],
   "window":{
@@ -34,6 +35,10 @@
       "text": "我的",
       "iconPath": "images/fly.png" 
    
+    },{
+      "pagePath": "pages/demo/demo",
+      "text":"示范",
+      "iconPath": "images/love.png"
     }
    ]
   },
