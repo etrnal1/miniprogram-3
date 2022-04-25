@@ -2,48 +2,82 @@
 <!-- <view>
   <button bindtap="hit" value="热门电影">热门电影</button>
 </view> -->
-<van-dropdown-menu >
-    <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" bind:change="dropdwon"/>
-    <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" />
+<van-dropdown-menu>
+  <van-dropdown-item
+    value="{{ value1 }}"
+    options="{{ option1 }}"
+    bind:change="dropdwon"
+  />
+  <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" />
 </van-dropdown-menu>
 
-<!--<view-->
-<!--  wx:for="{{datalist}}"-->
-<!--  wx:key="index"-->
-<!--  class="box"-->
-<!--&gt;-->
-<!--  <image-->
-<!--    src="{{item.img}}"-->
-<!--    mode="widthFix"-->
-<!--    alt=""-->
-<!--    style="100%"-->
-<!--  ></image>-->
-<!--  <view class="bor">-->
-<!--    <view style="margin-left: 20px;">-->
-<!--      {{item.nm}}-->
-<!--    </view>-->
-<!--    <view>-->
-<!--      {{item.cat}}-->
-<!--    </view>-->
+<view
+  wx:for="{{movielist}}"
+  wx:key="index"
+  class="box"
+>
+  <!-- <navigator
+    class=""
+    target=""
+    url="{{item.videourl}}"
+    hover-class="navigator-hover"
+    open-type="navigate"
+  > -->
+  <image
+    src="{{item.img}}"
+    mode="widthFix"
+    style="100%"
+    data-smile="{{index}}"
+    bindtap="clickvideo"
+  ></image>
 
-<!--  </view>-->
-
-<!--</view>-->
-<view wx:for="{{movielist}}" wx:key="index" class="box">
-    <image
-            src="{{item.img}}"
-            mode="widthFix"
-            alt=""
-            style="50%"
-    ></image>
-    <view class="bor">
-        <view style="margin-left: 20px;">
-            {{item.nm}}
-        </view>
-        <view>
-            {{item.cat}}
-        </view>
-
+  <view class="info">
+    <!-- 电影名称 -->
+    <view style="font-size:16px">
+      {{item.nm}}
     </view>
+    <!-- 评分 -->
+    <view
+      class="guan"
+      hover-class="none"
+      hover-stop-propagation="false"
+      style="color:orange;"
+    >
+      观众评 {{item.mk}}
+    </view>
+    <!-- 主演 -->
+    <view
+      class=""
+      hover-class="none"
+      hover-stop-propagation="false"
+      style="font-size:.56rem;color:rgb(102,102,102 )"
+    >
+      {{item.desc}}
+    </view>
+    <!--  -->
+    <view
+      class=""
+      hover-class="none"
+      hover-stop-propagation="false"
+      style="font-size:0.7rem;color:rgb(102,102,102 )"
+    >
+      {{item.showInfo}}
+    </view>
+
+  </view>
+</view>
+
+<view
+  class=""
+  hover-class="none"
+  hover-stop-propagation=""
+>
+  <video
+    src="{{movieurl}}"
+    enable-danmu
+    danmu-btn
+    controls
+  ></video>
+
 </view>
 

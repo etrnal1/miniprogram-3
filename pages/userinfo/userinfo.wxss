@@ -1,4 +1,23 @@
 /* pages/userinfo/userinfo.wxss */
-view{
-    display: flex;
+.user{
+    /*display: flex;*/
+    width: 776rpx;
+    height: 152px;
+    flex-dircetion:'column';
+    background-color: rgb(218, 91, 82);
+}
+.user image{
+    margin: 20rpx;
+    width: 144rpx;
+
+    height: 136rpx ;
+    border-radius:80rpx;
+
+}
+.user view{
+    /*display: flex;*/
+    margin-top: -150rpx;
+    margin-left: 150px;
+    /*float: right;*/
+    /*text-align: center;*/
 }

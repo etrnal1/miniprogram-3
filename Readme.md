@@ -1,5 +1,11 @@
 # 小程序开发
 
+### webstorm 环境配置
+
+##### 配置拼写免检查
+
+##### 配置插件
+
 ## Git 环境准备
 
 ```sh
@@ -340,4 +346,22 @@ wx.setStorageSync('token','res.userInfo')
 /usr/sbin/nginx -t
 /usr/sbin/nginx /etc/nginx/nginx.conf
 ```
+
+
+
+# 疑难
+
+- 小程序配置https 接口 调用能力
+- rem 使用布局规范
+- image 增加图片跳转规则
+
+### 小程序配置https
+
+  申请证书
+
+  配置nginx 服务器
+
+ nginx 服务器转发端口
+
+端口对应的目录起相应的服务接口
 

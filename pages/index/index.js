@@ -6,7 +6,7 @@ const app = getApp()
 Page({
   data: {
     option1: [
-      { text: '热映', value: 0 },
+      { text: '正在热映', value: 0 },
      
       { text: '即将上映', value: 2 },
       
@@ -26,6 +26,7 @@ Page({
     value2: 'a',
     value3:  'k',
     message:'binggo',
+    movieurl:'',
     datalist:'',
     movielist:'',
     weibo:'我的微博',
@@ -172,6 +173,20 @@ Page({
           hasUserInfo: true
         })
       }
+    })
+  },
+  // 点击跳转视频地址
+  clickvideo(e){
+    console.log(this.data.movielist)
+    console.log(e)
+    console.log("--------")
+    console.log(e.currentTarget.dataset.smile)  
+    let index =e.currentTarget.dataset.smile
+    let movie = this.data.movielist
+    console.log(movie[0])
+    console.log(movie[0]['videourl'])
+    this.setData({
+      movieurl:movie[index]['videourl']
     })
   },
   getUserInfo(e) {

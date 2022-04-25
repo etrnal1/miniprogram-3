@@ -28,7 +28,9 @@
       "iconPath": "images/fly.png"
   
     },{
-      "pagePath":"pages/scroll_view/scroll_view",
+ "/*pagePath*/":"pages/scroll_view/scroll_view",
+
+      "pagePath":"pages/userinfo/userinfo",
       "text": "我的",
       "iconPath": "images/fly.png" 
    

@@ -1,56 +1,25 @@
-
+/* 整体布局
+row | row-reverse | column | column-reverse
+flex-direction 属性规定弹性项目的方向  	默认值。作为一行，水平地显示弹性项目。
+display: flex;这句的作用：当布局超过屏幕时（因为是横向布局，所以这里指屏幕的宽），平均分布
+*/
 .box{
+    display: flex;
+    flex-direction: row;
     padding:20px;
     overflow: hidden;
 }
-.box image{
- 
-    width:200rpx;
-    float: left;
-   
-    
+/* 图片布局 */
+.box image{ 
+    width:128rpx;
+    height: 180rpx;
+    float:left;  
 }
-.bor {
-    /* padding-left: 20px; */
-    /* margin-left: 20px; */
-    /* margin:20px;/ */
-    padding: 20px;
+.info {
+    padding-left: 20rpx;
+    font-size: 15px;
+    text-align: left;
 }
-
-
-
-.s1{
-
-    width: 100px;
-    height: 100px;
-    background-color: aquamarine;
-}
-.s2{
-    width: 100px;
-    height: 100px;
-    background-color:red;
-}
-.s3{
-    width: 100px;
-    height: 100px;
-    background-color: black;
-
-}
-.s4{
-    width: 100px;
-    height: 100px;
-    background-color:orange;
-
-}
-.s5{
-    width: 100px;
-    height: 100px;
-    background-color:peru;
-
-}
-.s6{
-    width: 100px;
-    height: 100px;
-    background-color:purple;
-
+.info view{
+    margin-top: 15rpx;
 }

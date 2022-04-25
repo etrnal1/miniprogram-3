@@ -7,8 +7,72 @@ Page({
    */
   data: {
       userinfo:'',
-      columns:['北京','上海','郑州']
+      columns:['北京','上海','郑州'],
+      head:'',
+      mach:''
   },
+  /*
+    请求服务器的状态测试
+   */
+  clickservice(){
+    wx.request({
+      'url':'https://api.etrnal.com/say/',
+      success:(res)=>{
+        console.log('服务器状态')
+        console.log(res.data.data.Info)
+        // console.log(res.data.info)
+        this.setData({
+         mach:{'data':'tengxun'}
+        })
+      },
+      fail:(err)=>{
+        console.log(err)
+    }
+
+    })
+  },
+
+  /*点击更换头像*/
+  clickimg(){
+    console.log("更换头像")
+    wx.chooseImage({
+      count:1,
+      sizeType:['original','compressed'],
+      sourceType:['album','camera'], //可以指定相册或相机
+      success:(res) =>{
+        console.log(res)
+        console.log('-----------------------------')
+        console.log(res.tempFilePaths)
+        console.log('-----------------------------')
+
+        this.setData({
+          userinfo:{
+            ...this.data.userinfo,
+            avatarUrl:res.tempFilePaths[0]
+          }
+          // head:res.tempFilePaths
+        })
+        // let info=wx.getStorageSync('token')
+        // console.log(info['avatarUrl'])
+      //   wx.setStorageSync('','{
+      //       ...wx.getStorageSync('token'),
+      //       avatarUrl:tempFilePaths[0]
+      //
+      // })
+        // info
+        wx.setStorageSync('token',{
+          ...wx.getStorageSync('token'),
+          avatraUrl:res.tempFilePaths[0]
+        })
+
+
+      }
+
+    })
+  }
+
+
+  ,
 showuser(){
     // console.log('show userinio')
     let info=wx.getStorageSync('token')
@@ -34,7 +98,7 @@ showuser(){
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-
+    this.showuser()
   },
 
   /**
