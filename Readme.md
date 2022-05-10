@@ -16,23 +16,19 @@ git config --global user.email 192456@qq.com
 Tag Mix -Links 作者：jugujugu https://www.bilibili.com/read/cv6656655/ 出处：bilibili
 ```
 
-
-
 ## 目录结构
+
     app.js    逻辑
     app.json  配置
     app.wxss  样式
 
 ## flex 布局
+
 - flexible box 任何容器都可以为flex布局
-  . 父盒子设为flex 布局以后,子元素的float clear 
+  . 父盒子设为flex 布局以后,子元素的float clear
   veritalce-aligin 属性将失效
 
 - 伸缩布局=弹性布局=伸缩盒布局=弹性和布局=flex布练习开发小程序
-
-  
-
-
 
 ### 采用flex 布局的元素,成为flex 容器,他的所有子元素自动成为容器成员
 
@@ -40,28 +36,24 @@ Tag Mix -Links 作者：jugujugu https://www.bilibili.com/read/cv6656655/ 出处
 
 1. flex-direction 主轴的方向
 2. justify-content 设置主轴上的子元素排序
-3. Flex-wrap  设置子元素是否换行
-4. aligin-center  设置侧轴上的子要元素的排序方式
+3. Flex-wrap 设置子元素是否换行
+4. aligin-center 设置侧轴上的子要元素的排序方式
 5. Align-iteems 设置多行
 6. Flex-row
-
 
         解除SSL验证：git config --global http.sslVerify “false”
         再次 git push 即可
 
-
 ### 布局例子
 
 ```css
-.container{
+.container {
     display: flex;
     flex-direction: row;
     #居中布局 inital
     justify-content: flex-start;
 }
 ```
-
-
 
 Flex-start
 
@@ -88,28 +80,28 @@ Flex-grow
 ### 小程序语法
 
 - 模版语法 {{}} [里面支持js 语法]
-- wx:for  w x:key. 
+- wx:for w x:key.
 - js 语法类型
 
 ```html
+
 <view>{{ 10>20 ?'aaaa':'bbbb'}}</view>
 <view wx:for="{{datalist}}" wx:key="{{index}}"">{{item}}</view>
 ```
-
-
 
 wx.js
 
 ```js
 page({
-	#里面写需要传递的数;类似字典键值对[key:value]
-	data:{
-		datalist:[1,2,3]
-	}
+    #里面写需要传递的数;类似字典键值对[key
+:
+value
+]
+data:{
+    datalist:[1, 2, 3]
+}
 })
 ```
-
-
 
 #### 列表渲染
 
@@ -119,13 +111,11 @@ wx:for-item="keywinitem" wx:for-index ="" wx:key="keys"
 wx:if 
 ```
 
-
-
 #### 条件渲染
 
 #### 事件绑定
 
- Bindtap
+Bindtap
 
 ```
 <button type="primary" bindtap="handleTap"></button>
@@ -136,43 +126,40 @@ wx:if
 - this.setdata({}). [重新进行数据赋值]
 
 ```js
-this.setData({
-
-})
+this.setData({})
 ```
 
-
-
 ```js
-handleTap(){
-  this.setData({
-    myname:"xiaoming",
-    isCreated:!this.data.isHidden
-  })
-},
+handleTap()
+{
+    this.setData({
+        myname: "xiaoming",
+        isCreated: !this.data.isHidden
+    })
+}
+,
 ```
 
-#### 	catch 阻止冒泡
+#### catch 阻止冒泡
 
 ```js
-capture-bind 绑定事件
+capture - bind
+绑定事件
 
 ```
 
 ### 绑定事件
 
 ````js
-  bind-input
+  bind - input
 
-console.log("input",evt.detail)
+console.log("input", evt.detail)
 ````
 
 ### 微信请求(wx.request)
 
 - evt 没有跨域限制
 - 数据请求
-
-
 
 进行请求网址对时候，小程序开发工具勾选不进行域名校验
 
@@ -189,24 +176,18 @@ console.log("input",evt.detail)
      })
 ```
 
-
-
 ## Image
 
-- widthFix 
+- widthFix
 - overflow:hidden;【进行隐藏float】
-
-
 
 ```
 image.replace("/w.h","")+@11_1e_1c_128w_180h
 ```
 
-
-
 ```css
-.item{
-  overflow:hidden;
+.item {
+    overflow: hidden;
 }
 ```
 
@@ -214,37 +195,31 @@ image.replace("/w.h","")+@11_1e_1c_128w_180h
 
 swipe
 
-- swiper 默认高度是150px 应该设置为314rpx 
-- Autoplay 
-- interval="3000"  设置时间为3000 毫秒  
-
-
-
-  
+- swiper 默认高度是150px 应该设置为314rpx
+- Autoplay
+- interval="3000"  设置时间为3000 毫秒
 
 ```
 
 ```
-
-
 
 ### 封装request
 
 ```js
-function request(){
-	return new Promise((resolve,reject)=>{
-		wx.request({
-      url:'url',
-      success:(res)=>{
-        resolve(res.data)
-      },
-      fail:(err)=>{
-        reject(err)
-		
-		})
-	
-	})
-}
+function request() {
+    return new Promise((resolve, reject) => {
+        wx.request({
+            url: 'url',
+            success: (res) => {
+                resolve(res.data)
+            },
+            fail: (err) => {
+                reject(err)
+
+            })
+
+    })
+    }
 ```
 
 #### import from [引入其他js 文件的方法]
@@ -253,9 +228,9 @@ import from
 
 ```js
 request({
-  url:'http://localhost:50000/users'
-}).then(res=>{
-  console.log(res)
+    url: 'http://localhost:50000/users'
+}).then(res => {
+    console.log(res)
 })
 ```
 
@@ -263,7 +238,7 @@ request({
 
 ### OnReachBotton(上拉触底)
 
-总数据可能在header  头里面
+总数据可能在header 头里面
 
 #### Wx.request
 
@@ -280,8 +255,6 @@ if( ==){
 }
 ```
 
-
-
 ### stopPullDownRefresh()
 
 ```
@@ -292,41 +265,40 @@ setTimeout(()=>{
 
 ### 使用组件
 
-
-
 #### 新建
 
 #### 引用
 
 ### 获取用户授权
 
-- ​	  获取用户信息
-- ​    跳转页面
+- ​ 获取用户信息
+- ​ 跳转页面
 
 ```js
-##获取微信用户信息
-wx.getUserProfile ({
-	desc:'desc',
-	success:(res)=>	{
-			console.log(res)
-	
-	}
+#
+#获取微信用户信息
+wx.getUserProfile({
+    desc: 'desc',
+    success: (res) => {
+        console.log(res)
+
+    }
 }) 
 ```
 
 ```js
 #进行跳转网页
 wx.navigateTo({
-	url:""
+    url: ""
 })
 ```
 
 ```js
 #存储用户信息
-wx.setStorageSync('token','res.userInfo')
+wx.setStorageSync('token', 'res.userInfo')
 ```
 
-### vant weapp 引用 
+### vant weapp 引用
 
 #### 先使用npm安装
 
@@ -347,8 +319,6 @@ wx.setStorageSync('token','res.userInfo')
 /usr/sbin/nginx /etc/nginx/nginx.conf
 ```
 
-
-
 # 疑难
 
 - 小程序配置https 接口 调用能力
@@ -357,53 +327,81 @@ wx.setStorageSync('token','res.userInfo')
 
 ### 小程序配置https
 
-  申请证书
+申请证书
 
-  配置nginx 服务器
+配置nginx 服务器
 
- nginx 服务器转发端口
+nginx 服务器转发端口
 
 端口对应的目录起相应的服务接口
+
 ### 配置webstorm 不建索引
+
 选择目录————>选择将目录标记为-->排除
 即为不建立索引
 
 ### flex 布局
 
-  flex 弹性盒子
+flex 弹性盒子
 
 - flex-direction:row
 
-   盒子横向排列
+  盒子横向排列
 
 - justify-content
 
-  ​     左对齐
+  ​ 左对齐
 
-  ​    flex-start
+  ​ flex-start
 
-  ​    center 项目居中对齐
+  ​ center 项目居中对齐
 
-  ​    space-between 两边对齐
+  ​ space-between 两边对齐
 
-  ​    space-round 边距离对齐
+  ​ space-round 边距离对齐
 
-  - aligin-itemes
+    - aligin-itemes
 
       stretch
 
-  
+### 项目属性
 
-  
+​ order 属性为0
 
-  ### 项目属性
+​ order 数值越小越靠前 排列
 
-  ​      order 属性为0
+- [ ] flex-grow 默认为不分配 默认值为0
 
-  ​	  order 数值越小越靠前  排列
+### 小程序 上传 大图进行压缩
 
-  
+utils -images.js
+上传大图需要调整图片压缩时间
 
-  - [ ] flex-grow 默认为不分配 默认值为0
+```javascript 
+  调整时间1000 的大小
+  function getCanvasImage(canvasId, imagePath, imageW, imageH, getImgSuccess) {
+//创建画布内容
+var _self = this;
+const ctx = wx.createCanvasContext(canvasId, _self);
+//图片画上去，imageW和imageH是画上去的尺寸，图像和画布间隔都是0
+ctx.drawImage(imagePath, 0, 0, imageW, imageH);
+//这里一定要加定时器，给足够的时间去画（所以每次递归最少要耗时200ms，多次递归很耗时！）
+    ctx.draw(false, setTimeout(function () {
+//把当前画布指定区域的内容导出生成指定大小的图片，并返回文件路径
+wx.canvasToTempFilePath({
+          canvasId: canvasId,
+          x: 0,
+          y: 0,
+          width: imageW,
+          height: imageH,
+          quality: 1, //最高质量
+  success: (res) => {
+//将取出的图片路径通过回调函数返回
+getImgSuccess(res.tempFilePath);
+}
+})
+}, 1000));   
+}
+```
 
   
