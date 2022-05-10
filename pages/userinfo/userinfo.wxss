@@ -1,20 +1,27 @@
 /* pages/userinfo/userinfo.wxss */
-.user{
+page {
+    background: -webkit-linear-gradient(bottom, white, white, rgb(121, 163, 194));
+
+}
+
+.user {
     /*display: flex;*/
     width: 776rpx;
     height: 152px;
-    flex-dircetion:'column';
+    flex-dircetion: 'column';
     background-color: rgb(218, 91, 82);
 }
-.user image{
+
+.user image {
     margin: 20rpx;
     width: 144rpx;
 
-    height: 136rpx ;
-    border-radius:80rpx;
+    height: 136rpx;
+    border-radius: 80rpx;
 
 }
-.user view{
+
+.user view {
     /*display: flex;*/
     margin-top: -150rpx;
     margin-left: 150px;

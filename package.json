@@ -18,8 +18,17 @@
   "homepage": "https://github.com/etrnal1/miniprogram-3#readme",
   "dependencies": {
     "@vant/weapp": "^1.10.2",
+    "cos-wx-sdk-v5": "^1.1.7",
+    "imagemin": "^8.0.1",
+    "imagemin-pngquant": "^9.0.2",
+    "miniprogram-recycle-view": "^0.1.5",
+    "miniprogram-sm-crypto": "^0.3.8",
     "vant": "^3.4.8",
     "vant-weapp": "^0.5.29",
     "weui-miniprogram": "^1.2.3"
-  }
+  },
+  "devDependencies": {
+    "prettier": "^2.6.2"
+  },
+  "keywords": []
 }

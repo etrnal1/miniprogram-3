@@ -1,24 +1,64 @@
-/* pages/demo/demo.wxss
-    flex-direction row 垂直方向是主轴
-
- */
-.container{
+.container {
+    overflow: hidden;
     display: flex;
-    width: 300px;
-    height: 500px;
-    background-color: deeppink;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    background-color: rgb(155, 209, 70);
+}
+
+.search {
+    margin-top: -150rpx;
+    width: 90%;
+}
+
+.container .header {
+    margin-top: 50rpx;
+    border-radius: 35rpx;
+    display: flex;
+    background-color: rgb(247, 254, 248);
+    width: 90%;
+    height: 300rpx;
+    font-size: 1.5rem;
+    background-color: orange;
+}
+
+.container .body {
+    margin-top: 40rpx;
+    border-radius: 30rpx;
+    background-color: rgb(247, 254, 248);
+    width: 90%;
+    height: 700rpx;
+}
+
+.container .body .hui {
+
+    display: flex;
     flex-direction: row;
+    align-items: center;
+
 }
-pages{
-    height: 500rpx;
+
+.left {
+
+    background-color: aqua;
+
 }
-.one{
-    width: 100px;
-    height: 500px;
-    background-color: mediumspringgreen;
+
+.b {
+    margin-left: 20rpx;
+    height: 86px;
+    width: 157px;
+    background-color: rgb(108, 172, 229);
 }
-.two{
-    width: 100px;
-    height: 500px;
-    background-color: blueviolet;
+
+.c {
+    margin-left: 20rpx;
+    height: 86px;
+    width: 157px;
+    background-color: rgb(108, 172, 130);
 }
+
+
+
+

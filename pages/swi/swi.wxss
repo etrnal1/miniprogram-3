@@ -1,14 +1,20 @@
 /* pages/swi/swi.wxss */
+page {
+    background: -webkit-linear-gradient(bottom, white, white, rgb(121, 163, 194));
 
-swiper{
+}
+
+swiper {
     min-height: 314rpx;
 }
+
 .actor {
-    padding:20px;
+    padding: 20px;
     overflow: hidden;
 
 }
-.actor image{
-    width:200rpx;
-    float:left;
+
+.actor image {
+    width: 200rpx;
+    float: left;
 }

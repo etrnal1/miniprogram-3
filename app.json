@@ -1,62 +1,48 @@
 {
-  "pages":[
+  "pages": [
+    "pages/ocr/ocr",
+    "pages/card/card",
     "pages/demo/demo",
+    "pages/bar/index",
+    "pages/excel/excel",
+    "pages/smart/smart",
     "pages/index/index",
     "pages/swi/swi",
-    "pages/scroll_view/scroll_view",
     "pages/auth/auth",
     "pages/telform/telform",
     "pages/userinfo/userinfo",
-
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "热门电影",
-    "navigationBarTextStyle":"black"
-  }, 
-
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#83a5c0",
+    "navigationBarTextStyle": "black"
+  },
   "tabBar": {
-    "list": [{
-      "pagePath":"pages/swi/swi",
-      "text": "热门演出",
-      "iconPath": "images/book.png"
-   
-    },{
-      "pagePath": "pages/index/index",
-      "text": "热门电影",
-      "iconPath": "images/fly.png"
-  
-    },{
- "/*pagePath*/":"pages/scroll_view/scroll_view",
-
-      "pagePath":"pages/userinfo/userinfo",
-      "text": "我的",
-      "iconPath": "images/fly.png" 
-   
-    },{
-      "pagePath": "pages/demo/demo",
-      "text":"示范",
-      "iconPath": "images/love.png"
-    }
-   ]
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "热门电影",
+        "iconPath": "images/movie.jpg"
+      },
+     
+      {
+        "pagePath": "pages/ocr/ocr",
+        "text": "日常工作",
+        "iconPath": "images/richang.png"
+      }
+    ]
   },
   "usingComponents": {
     "van-button": "@vant/weapp/button/index",
-    "van-icon":"@vant/weapp/icon/index",
-    "van-cell":"@vant/weapp/cell/index",
-    "van-calendar":"@vant/weapp/calendar/index",
-    "van-popup": "@vant/weapp/popup/index",
-    "van-dialog": "@vant/weapp/dialog/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "i-notice-bar": "@vant/weapp/notice-bar/index",
+    "i-card": "@vant/weapp/card/index",
     "van-field": "@vant/weapp/field/index",
-    "van-picker": "@vant/weapp/picker/index",
-    "van-dialog": "@vant/weapp/dialog/index",
-    "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
-    "van-dropdown-item": "@vant/weapp/dropdown-item/index"
-
-    
+    "ec-canvas": "../../ec-canvas/ec-canvas"
   },
-
   "sitemapLocation": "sitemap.json"
 }
