@@ -1,18 +1,19 @@
 {
   "pages": [
-    "pages/ocr/ocr",
-    "pages/card/card",
-    "pages/demo/demo",
-    "pages/bar/index",
-    "pages/excel/excel",
-    "pages/smart/smart",
-    "pages/index/index",
-    "pages/swi/swi",
-    "pages/auth/auth",
-    "pages/telform/telform",
-    "pages/userinfo/userinfo",
-    "pages/logs/logs"
+    "pages/AI/AI",
+    "pages/index/index"  
   ],
+  "plugins": {
+    "chatbot": {
+      "version": "1.2.44",
+      "provider": "wx8c631f7e9f2465e1"
+    },
+    "WechatSI": {
+      "version": "0.3.4",
+      "provider": "wx069ba97219f66d99"
+    }
+  },
+  
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#83a5c0",
@@ -21,16 +22,16 @@
   "tabBar": {
     "list": [
       {
+        "pagePath": "pages/AI/AI",
+        "text": "智能对话",
+        "iconPath": "images/movie.jpg"
+      },
+      {
         "pagePath": "pages/index/index",
         "text": "热门电影",
         "iconPath": "images/movie.jpg"
-      },
-     
-      {
-        "pagePath": "pages/ocr/ocr",
-        "text": "日常工作",
-        "iconPath": "images/richang.png"
       }
+     
     ]
   },
   "usingComponents": {
@@ -41,8 +42,10 @@
     "van-toast": "@vant/weapp/toast/index",
     "i-notice-bar": "@vant/weapp/notice-bar/index",
     "i-card": "@vant/weapp/card/index",
-    "van-field": "@vant/weapp/field/index",
-    "ec-canvas": "../../ec-canvas/ec-canvas"
+    "van-field": "@vant/weapp/field/index"
   },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
   "sitemapLocation": "sitemap.json"
 }

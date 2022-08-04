@@ -1,0 +1,69 @@
+<!--pages/excel/excel.wxml-->
+
+<wxs module="m1">
+    // var msg = "hello"
+    // const total = '1';
+    var getMax = function (array) {
+        var total = 0
+        // console.log(array.length)
+        return array.length
+    }
+    module.exports.getMax = getMax;
+</wxs>
+<view class="cont">
+    <view class="title">
+        <text>图像识别</text>
+    </view>
+    <view style="margin-top:50rpx;">
+        <van-button bind:tap="choseImg" style="width:1200px;height:500rpx;">上传图片</van-button>
+    </view>
+    <canvas
+            style="width: {{cw}}px; height: {{cw}}px;position: absolute; z-index: -1; left: -10000rpx;; top: -10000rpx;"
+            canvas-id="zipCanvas"
+    ></canvas>
+    <!--    <image width="400" mode="widthFix" src="{{imagePath}}"></image>-->
+
+    <!--    <view style="margin-top:50rpx">-->
+    <!--        <van-button type="info" bind:tap="ocr_card">开始识别</van-button>-->
+    <!--    </view>-->
+    <view style="margin-top:50rpx">
+        <van-button type="info" bind:tap="ocr_excel">识别表格</van-button>
+
+    </view>
+    <!--    <van-button plain hairline class="btn" type="primary" bind:tap="choseImg">上传图片-->
+    <!--&lt;!&ndash;    </van-button>&ndash;&gt;-->
+    <!--    ocr_type: 1-->
+    <!--    <van-button class="btn" type="primary" bind:tap="ocr_excel">第2步识别表格test-->
+    <!--    </van-button>-->
+    <view style="margin-top:50rpx">
+        <van-button type="info" bind:tap="export_data">导出数据</van-button>
+    </view>
+
+    <!--    172.17.0.6:9000-->
+    <!--    <van-button class="btn" type="primary" bind:tap="export_data">第三步导出数据-->
+    <!--    </van-button>-->
+</view>
+        <!--<view style="color:red;font-size:22px;text-align:center;">本次目前一共升级{{m1.getMax(img_result)}}个系统</view>-->
+
+        <!--{{let total=0}}-->
+<view wx:for="{{img_result}}" wx:key="index">
+    <!--    description-->
+    <!--    {{index}}-->
+    <!--    <view>本次一共升级的系统数量为{{index += index}}</view>-->
+    <van-cell-group>
+        <!--        <van-cell title="单元格" value="内容"/>-->
+        <van-cell title="" value="{{item.DetectedText}}" label="" border="{{ false }}" icon="description"/>
+        <!--        <van-icon slot="right-icon" name="search" class="custom-icon"/>-->
+    </van-cell-group>
+    <!--    <view>序号{{index}}</view>-->
+    <!--    <view class="info" bind:tap="copy">{{item.DetectedText}}</view>-->
+    <!--    {{}}-->
+    <!--    {{total+=index}}-->
+</view>
+        <!--<view>{{test.message}}</view>-->
+        <!--<view style="color:red;font-size:22px">本次一共升级{{m1.getMax(img_result)}}个系统</view>-->
+
+        <!--<view>-->
+        <!--    <van-button type="danger" bind:tap="clicklink" value="{{tmp_file}}">复制下载</van-button>-->
+
+        <!--</view>-->
