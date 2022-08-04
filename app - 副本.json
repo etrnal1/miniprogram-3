@@ -1,9 +1,7 @@
 {
   "pages": [
-   
-   
-    "pages/AI/AI"
-     
+    "pages/AI/AI",
+    "pages/index/index"  
   ],
   "plugins": {
     "chatbot": {
@@ -11,7 +9,7 @@
       "provider": "wx8c631f7e9f2465e1"
     },
     "WechatSI": {
-      "version": "0.3.5",
+      "version": "0.3.4",
       "provider": "wx069ba97219f66d99"
     }
   },
@@ -21,13 +19,22 @@
     "navigationBarBackgroundColor": "#83a5c0",
     "navigationBarTextStyle": "black"
   },
-  
-
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/AI/AI",
+        "text": "智能对话",
+        "iconPath": "images/movie.jpg"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "热门电影",
+        "iconPath": "images/movie.jpg"
+      }
+     
+    ]
+  },
   "usingComponents": {
-    "chat": "plugin://chatbot/chat"
-   
-
-
    
   },
   "requiredBackgroundModes": [

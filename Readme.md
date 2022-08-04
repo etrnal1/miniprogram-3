@@ -271,8 +271,8 @@ setTimeout(()=>{
 
 ### 获取用户授权
 
-- ​ 获取用户信息
-- ​ 跳转页面
+-  获取用户信息
+-  跳转页面
 
 ```js
 #
@@ -350,15 +350,15 @@ flex 弹性盒子
 
 - justify-content
 
-  ​ 左对齐
+   左对齐
 
-  ​ flex-start
+   flex-start
 
-  ​ center 项目居中对齐
+   center 项目居中对齐
 
-  ​ space-between 两边对齐
+   space-between 两边对齐
 
-  ​ space-round 边距离对齐
+   space-round 边距离对齐
 
     - aligin-itemes
 
@@ -366,9 +366,9 @@ flex 弹性盒子
 
 ### 项目属性
 
-​ order 属性为0
+ order 属性为0
 
-​ order 数值越小越靠前 排列
+ order 数值越小越靠前 排列
 
 - [ ] flex-grow 默认为不分配 默认值为0
 
@@ -405,3 +405,136 @@ getImgSuccess(res.tempFilePath);
 ```
 
   
+
+## 微信小程序 对话插件的接入
+
+#### 引入插件
+
+AI.json 里面填入以下信息
+
+```
+{
+  "usingComponents": {
+    "chat": "plugin://chatbot/chat"
+  }
+}
+```
+
+ AI.wxml  里面设置
+
+chat 组件外部必须指定容器, 并设置容器高度, 如果全屏展示, 设置高度为 100vh, 如果是自定义导航栏, 设置高度为(100vh - 导航栏的高度)即可. 
+
+```
+
+```
+
+
+
+ generic:textMessage="customTextMessage"
+
+   generic:weatherMessage="customWeatherMessage"
+
+   generic:imageMessage="costomImageMessage"
+
+   generic:guideCard="customGuideCard"
+
+   generic:queryMessage="customQuery"
+
+   generic:operateCard="customoperateCard"
+
+```
+  <view style="height: calc(100vh -1px);">
+    <chat
+      id="component-id"
+      
+      bind:backHome="goBackHome"
+      generic:textMessage="customTextMessage"
+      generic:weatherMessage="customWeatherMessage"
+      generic:imageMessage="costomImageMessage"
+      generic:guideCard="customGuideCard"
+      generic:queryMessage="customQuery"
+      generic:operateCard="customoperateCard"
+    >
+    </chat>
+  </view>
+```
+
+#### 文本复写
+
+{
+    "usingComponents": {
+        "customTextMessage": "../../components/customTextMessage/customTextMessage"
+    }
+}
+
+#### 添加插件commenet 方便复写
+
+```js
+//wx8c631f7e9f2465e1
+var plugin = requirePlugin("chatbot");
+App({
+  
+    onLaunch: function () {
+      wx.login({
+        success: (res) => {
+            // 通过code换取openid
+            if (res.code) {
+                wx.request({
+                    url: "",
+                    method: "post",
+                    data: {
+                        code: res.code,
+                    },
+                    success: (res) => {
+                        if (res.data && res.data.openid) {
+                            // 获取的openid存入storage，方便之后使用
+                         
+                            wx.setStorageSync("openId", res.data.openid);
+                            wx.setStorageSync("lol", res.data);
+                        }
+                    },
+                });
+            }
+        },
+        fail: () => {},
+        complete: () => {},
+    });
+        plugin.init({
+            appid: "3Vlm9jyKSsfOkRoaIWUzeNO043qt8B", //小程序示例账户，仅供学习和参考
+            openid: "openId", //用户的openid，必填项，可通过wx.login()获取code，然后通过后台接口获取openid
+            welcome:["请问您需要什么帮助"],
+            welcomeImage: 'http://inews.gtimg.com/newsapp_bt/0/10701537095/1000',
+            userHeader: "", // 用户头像
+            userName: "", // 用户昵称
+           // navHeight: 88,
+        //    textToSpeech
+            textToSpeech: 1,
+            background: "rgba(247,251,252,1)",
+            //background: "rgba(131, 165, 192)",
+            // 聊天提示语的高度 过低会被隐藏
+            guideCardHeight: 40,
+            operateCardHeight: 100,
+            history: true,
+            //文本评论展示
+            hideMovableButton:true,
+            //自定义导航栏
+            navHeight: 20,
+            // 定义输入框的输入内容
+            inputPlaceHolder:"请输入相关问题/或语音说话",
+            robotHeader:
+            "https://res.wx.qq.com/mmspraiweb_node/dist/static/miniprogrampageImages/talk/leftHeader.png",
+        userHeader:
+            "https://res.wx.qq.com/mmspraiweb_node/dist/static/miniprogrampageImages/talk/rightHeader.png",
+            
+            guideList:["我想听广播","我想听起风了","北京天气"],
+          
+            anonymous: false, // 是否允许匿名用户评价，默认为false，设为true时，未传递userName、userHeader两个字段时将弹出登录框
+            success: () => { this.setData({
+                flag: true,
+            });}, //非必填
+            fail: (error) => {}, //非必填
+        });
+    },
+});
+```
+

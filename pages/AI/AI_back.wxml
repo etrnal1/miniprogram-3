@@ -1,14 +1,14 @@
-<view style="width: 100vw; height: 100vh;overflow: hidden;">
-  <view class='nav-wrap' style='width: 10vw; height: 10px;'>
+<view style="width: 100vw; height: 80vh;overflow: hidden;">
+  <view class='nav-wrap' style='width: 10vw; height: {{statusBarHeight}}px;'>
     <view class="" style="height: {{status}}px"></view>
     <view class='nav-title' style='position: relative;width: 100vw;text-align: center;height: {{navHeight}}px;line-height: {{navHeight}}px'>
-      <view class="nav-title">
+      <view class="">
        
       </view>
     </view>
   </view>
-  <view style="height:calc(100vh-100px)">
-   <chat
+  <view style="height: calc(100vh - {{statusBarHeight}}px);">
+    <chat
       id="component-id"
       bind:queryCallback="getQueryCallback"
       bind:backHome="goBackHome"

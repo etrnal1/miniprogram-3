@@ -1,4 +1,0 @@
-<!--components/search/Search.wxml-->
-<!-- <text>components/search/Search.wxml</text> -->
-<input type="text" placeholder="请输入关键词" bindtap="handleTap"/>
-

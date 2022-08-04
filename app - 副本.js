@@ -16,9 +16,7 @@ App({
                     success: (res) => {
                         if (res.data && res.data.openid) {
                             // 获取的openid存入storage，方便之后使用
-                         
                             wx.setStorageSync("openId", res.data.openid);
-                            wx.setStorageSync("lol", res.data);
                         }
                     },
                 });
@@ -30,32 +28,23 @@ App({
         plugin.init({
             appid: "3Vlm9jyKSsfOkRoaIWUzeNO043qt8B", //小程序示例账户，仅供学习和参考
             openid: "openId", //用户的openid，必填项，可通过wx.login()获取code，然后通过后台接口获取openid
-            welcome:["请问您需要什么帮助"],
-            welcomeImage: 'http://inews.gtimg.com/newsapp_bt/0/10701537095/1000',
             userHeader: "", // 用户头像
             userName: "", // 用户昵称
            // navHeight: 88,
-        //    textToSpeech
-            textToSpeech: 1,
+           textToSpeech: 1,
             background: "rgba(247,251,252,1)",
-            //background: "rgba(131, 165, 192)",
-            // 聊天提示语的高度 过低会被隐藏
-            guideCardHeight: 40,
-            operateCardHeight: 100,
-            history: true,
-            //文本评论展示
-            hideMovableButton:true,
-            //自定义导航栏
-            navHeight: 20,
-            // 定义输入框的输入内容
-            inputPlaceHolder:"请输入相关问题/或语音说话",
+      guideCardHeight: 40,
+      operateCardHeight: 90,
+      history: true,
+      navHeight: 0,
             robotHeader:
             "https://res.wx.qq.com/mmspraiweb_node/dist/static/miniprogrampageImages/talk/leftHeader.png",
-        userHeader:
+            userHeader:
             "https://res.wx.qq.com/mmspraiweb_node/dist/static/miniprogrampageImages/talk/rightHeader.png",
-            
-            guideList:["我想听广播","我想听起风了","北京天气"],
-          
+            guideList:["外协值班",
+            "应用值班",
+            "今天天气如何","听音乐"],
+            welcome:["请问有什么需要帮助的吗"],
             anonymous: false, // 是否允许匿名用户评价，默认为false，设为true时，未传递userName、userHeader两个字段时将弹出登录框
             success: () => { this.setData({
                 flag: true,
