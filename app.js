@@ -18,7 +18,7 @@ App({
                             // 获取的openid存入storage，方便之后使用
                          
                             wx.setStorageSync("openId", res.data.openid);
-                            wx.setStorageSync("lol", res.data);
+                           
                         }
                     },
                 });
