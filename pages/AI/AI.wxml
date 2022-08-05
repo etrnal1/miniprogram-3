@@ -1,25 +1,12 @@
 <view style="width: 100vw; height: 100vh;overflow: hidden;">
-  <view class='nav-wrap' style='width: 10vw; height: 10px;'>
-    <view class="" style="height: {{status}}px"></view>
-    <view class='nav-title' style='position: relative;width: 100vw;text-align: center;height: {{navHeight}}px;line-height: {{navHeight}}px'>
-      <view class="nav-title">
-       
-      </view>
-    </view>
-  </view>
-  <view style="height:calc(100vh-100px)">
-   <chat
-      id="component-id"
-      bind:queryCallback="getQueryCallback"
-      bind:backHome="goBackHome"
-      generic:textMessage="customTextMessage"
-      generic:weatherMessage="customWeatherMessage"
-      generic:imageMessage="costomImageMessage"
-      generic:guideCard="customGuideCard"
-      generic:queryMessage="customQuery"
-      generic:operateCard="customoperateCard"
-    >
-    </chat>
-  </view>
+	<view class="nav-wrap" style="width: 10vw; height: 10px;">
+		<view class="" style="height: {{ status }}px"></view>
+		<view
+			class="nav-title"
+			style="position: relative;width: 100vw;text-align: center;height: {{ navHeight}}px;line-height: {{navHeight }}px"
+		></view>
+	</view>
+	<view style="height:calc(100vh-100px)">
+		<chat id="component-id" bind:queryCallback="getQueryCallback" bind:backHome="goBackHome"></chat>
+	</view>
 </view>
-

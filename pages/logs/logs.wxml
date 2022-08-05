@@ -1,6 +1,18 @@
-<!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:key="timeStamp" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log.date}}</text>
-  </block>
-</view>
+1.
+<a
+	href="weixin://bizmsgmenu?msgmenucontent=案例：个人存款-例行-006 状态：未处理，根据案例请联系会计平台确认是否发送文件，会计平台未转一线运维，请转会计平台二线处理&msgmenuid=案例：个人存款-例行-006 状态：未处理，根据案例请联系会计平台确认是否发送文件，会计平台未转一线运维，请转会计平台二线处理"
+>案例：个人存款-例行-006 状态：未处理，根据案例请联系会计平台确认是否发送文件，会计平台未转一线运维，请转会计平台二线处理</a>
+2.
+<a
+	href="weixin://bizmsgmenu?msgmenucontent=核心数据库 active SQL run time above 480s (current value: 21176.55s) client_ip: 22.200.*.155,client_port: 59179,app_name: PostgreSQL JDBC Driver,pid:&msgmenuid=核心数据库 active SQL run time above 480s (current value: 21176.55s) client_ip: 22.200.*.155,client_port: 59179,app_name: PostgreSQL JDBC Driver,pid:"
+>
+	核心数据库 active SQL run time above 480s (current value: 21176.55s) client_ip: 22.200.*.155,client_port: 59179,app_name: PostgreSQL JDBC Driver,pid:
+</a>
+3.
+<a href="weixin://bizmsgmenu?msgmenucontent=企业数据总线消息队列检查有异常，新核心存款未回执消息数积压508笔&msgmenuid=企业数据总线消息队列检查有异常，新核心存款未回执消息数积压508笔">企业数据总线消息队列检查有异常，新核心存款未回执消息数积压508笔</a>
+4.
+<a href="weixin://bizmsgmenu?msgmenucontent=服务队列监控-，队列监控，未接收信息异常，队列名称，未接收信息数&msgmenuid=服务队列监控-，队列监控，未接收信息异常，队列名称，未接收信息数">服务队列监控-，队列监控，未接收信息异常，队列名称，未接收信息数</a>
+5.
+<a
+	href="weixin://bizmsgmenu?msgmenucontent=核心数据库 active SQL run time above 480s (current value: 21176.55s) ,app_name: PostgreSQL JDBC Driver,pid:&msgmenuid=核心数据库 active SQL run time above 480s (current value: 21176.55s) ,app_name: PostgreSQL JDBC Driver,pid:"
+>核心数据库 active SQL run time above 480s (current value: 21176.55s) ,app_name: PostgreSQL JDBC Driver,pid:</a>

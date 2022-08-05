@@ -5,9 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    guideList:[
+    datalist:[
       'lol'
-    ]
+    ],
+    myname:''
 
   },
 
@@ -60,6 +61,11 @@ Page({
    
     console.log("-----------")
     console.log(e.detail);
+    this.setData({
+      myname: e.detail.data.answer,
+      
+  })
+    
   },
 
 
@@ -69,7 +75,7 @@ Page({
   //   listData.push(e.detail)
   //   if (listData.length === 10) {
   //     wx.navigateTo({
-  //       url: '../newsPage/newsPage',
+  //       url: '../components/newsPage/newsPage',
   //     })
   //   }
   // },
