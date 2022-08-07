@@ -6,6 +6,7 @@
   
   <view class="content" style="height: calc(100vh - {{statusBarHeight}}px)">
     <view class="originalPlugin" bindtap="goOriginalPlugin">原始插件</view>
+<!--    跳转复写组件-->
     <view class="rewriteComponent" bindtap="goRewriteComponent">复写组件</view>
   </view>
 </view>

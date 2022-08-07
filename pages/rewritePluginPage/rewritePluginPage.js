@@ -21,13 +21,17 @@ Page({
           statusBarHeight: res.statusBarHeight + navHeight
         })
       }
-    })
+    }),
+
     plugin.init({
+      wx.login({
+
+      }),
       appid: "3Vlm9jyKSsfOkRoaIWUzeNO043qt8B",
       // textToSpeech: true,
       // guideList: [],
       welcome: '请问需要什么帮助',
-       background: "#eee",
+      background: "#eee",
       //聊天气泡
       guideCardHeight: 70,
      // 设置输入语言 和语音位置的高度大小
