@@ -1,5 +1,5 @@
 //wx8c631f7e9f2465e1
-var plugin = requirePlugin("chatbot");
+var plugin = requirePlugin("myPlugin");
 App({
   
     onLaunch: function () {
@@ -63,4 +63,6 @@ App({
             fail: (error) => {}, //非必填
         });
     },
+    onShow:function(){},
+    onHide:function(){}
 });
