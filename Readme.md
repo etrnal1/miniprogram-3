@@ -565,4 +565,4 @@ App({
 
 #### 输出参数
 
-![Snipaste_2022-08-07_21-04-54](F:\miniprogram-3\images\Snipaste_2022-08-07_21-04-54.png)
+![Snipaste_2022-08-07_21-04-54](\miniprogram-3\images\Snipaste_2022-08-07_21-04-54.png)
