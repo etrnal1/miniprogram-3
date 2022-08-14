@@ -1,35 +1,24 @@
 {
   "pages": [
 
-    "pages/zujian/zujian",
-    "pages/AI/AI",
-    "pages/rewritePluginPage/rewritePluginPage",
-    "pages/originalPluginPage/originalPluginPage",
-   "pages/webviewPage/webviewPage"
+    "pages/weclome/weclome",
+    "pages/post/post"
+   
      
   ],
   "plugins": {
-    "myPlugin": {
-      "version": "1.2.44",
-      "provider": "wx8c631f7e9f2465e1"
-  },
-  
-    "WechatSI": {
-      "version": "0.3.5",
-      "provider": "wx069ba97219f66d99"
-    }
+
   },
   
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#83a5c0",
+   
+    "navigationBarBackgroundColor": "#4A6141",
     "navigationBarTextStyle": "black"
   },
   
 
   "usingComponents": {
-    "chat": "plugin://chatbot/chat"
-   
+ 
 
 
    

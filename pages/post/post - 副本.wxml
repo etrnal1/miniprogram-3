@@ -1,0 +1,86 @@
+<view class="">
+	<swiper autoplay="{{ true }}" interval="6000" circular="{{ true }}" indicator-dots="true">
+		<swiper-item class="imgItem" item-id="" wx:for="{{ imglist }}" wx:key="index">
+			<image src="{{ item }}" alt="" />
+		</swiper-item>
+	</swiper>
+</view>
+<view class="post-container">
+	<view class="post-author-date">
+		<image
+			model="scaleToFill"
+			style="border-radius: 40px;"
+			src="https://img.zcool.cn/community/0135d65d80573fa8012060be905395.jpg@1280w_1l_2o_100sh.jpg"
+		/>
+		<text>Jan 09 2022</text>
+	</view>
+	<text class="post-title">{{title}}</text>
+	<!-- aspectFit -->
+	<image src="https://www.keaidian.com/uploads/allimg/190603/03163328_2.jpg" class="post-image" model="top" />
+	<text class="post-artitle">{{content}}</text>
+	<!-- <view class="post-like">
+		<image
+			src="https://cdn.colorhub.me/eICEIlK_tfE/rs:auto:0:500:0/g:ce/fn:colorhub/bG9jYWw6Ly8vNTEvZTYvNWUyYmZlYmVmNmI5ZjY3NjU4MGZhZjRkZjI1MjEzNmQwMGI4NTFlNi5qcGVn.jpg"
+		/>
+		<text>108</text>
+		<image
+			src="https://cdn.colorhub.me/eICEIlK_tfE/rs:auto:0:500:0/g:ce/fn:colorhub/bG9jYWw6Ly8vNTEvZTYvNWUyYmZlYmVmNmI5ZjY3NjU4MGZhZjRkZjI1MjEzNmQwMGI4NTFlNi5qcGVn.jpg"
+		/>
+		<text>92</text>
+	</view> -->
+</view>
+<view class="post-container">
+	<view class="post-author-date">
+		<image
+			model="scaleToFill"
+			style="border-radius: 40px;"
+			src="https://img.zcool.cn/community/0135d65d80573fa8012060be905395.jpg@1280w_1l_2o_100sh.jpg"
+		/>
+		<text>Jan 09 2022</text>
+	</view>
+	<text class="post-title">{{title}}</text>
+	<!-- aspectFit -->
+	<image src="https://www.keaidian.com/uploads/allimg/190603/03163328_2.jpg" class="post-image" model="top" />
+	<text class="post-artitle">{{content}}</text>
+	<!-- <view class="post-like">
+		<image
+			src="https://cdn.colorhub.me/eICEIlK_tfE/rs:auto:0:500:0/g:ce/fn:colorhub/bG9jYWw6Ly8vNTEvZTYvNWUyYmZlYmVmNmI5ZjY3NjU4MGZhZjRkZjI1MjEzNmQwMGI4NTFlNi5qcGVn.jpg"
+		/>
+		<text>108</text>
+		<image
+			src="https://cdn.colorhub.me/eICEIlK_tfE/rs:auto:0:500:0/g:ce/fn:colorhub/bG9jYWw6Ly8vNTEvZTYvNWUyYmZlYmVmNmI5ZjY3NjU4MGZhZjRkZjI1MjEzNmQwMGI4NTFlNi5qcGVn.jpg"
+		/>
+		<text>92</text>
+	</view> -->
+</view>
+<view class="post-container">
+	<view class="post-author-date">
+		<image
+			model="scaleToFill"
+			style="border-radius: 40px;"
+			src="https://img.zcool.cn/community/0135d65d80573fa8012060be905395.jpg@1280w_1l_2o_100sh.jpg"
+		/>
+		<text>Jan 09 2022</text>
+	</view>
+	<text class="post-title">{{title}}</text>
+	<!-- aspectFit -->
+	<image src="https://www.keaidian.com/uploads/allimg/190603/03163328_2.jpg" class="post-image" model="top" />
+	<text class="post-artitle">{{content}}</text>
+	<!-- <view class="post-like">
+		<image
+			src="https://cdn.colorhub.me/eICEIlK_tfE/rs:auto:0:500:0/g:ce/fn:colorhub/bG9jYWw6Ly8vNTEvZTYvNWUyYmZlYmVmNmI5ZjY3NjU4MGZhZjRkZjI1MjEzNmQwMGI4NTFlNi5qcGVn.jpg"
+		/>
+		<text>108</text>
+		<image
+			src="https://cdn.colorhub.me/eICEIlK_tfE/rs:auto:0:500:0/g:ce/fn:colorhub/bG9jYWw6Ly8vNTEvZTYvNWUyYmZlYmVmNmI5ZjY3NjU4MGZhZjRkZjI1MjEzNmQwMGI4NTFlNi5qcGVn.jpg"
+		/>
+		<text>92</text>
+	</view> -->
+</view>
+<view>
+	<text>{{readingNum}}</text>
+	|
+	<text>{{commentNum}}</text>
+	|
+	<text>{{collectionNum}}</text>
+</view>

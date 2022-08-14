@@ -12,3 +12,10 @@
     background: -webkit-linear-gradient(bottom, white, white, rgb(121, 163, 194));
 
 } 
+
+text{
+    font-size: 24rpx;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #666;
+    
+}

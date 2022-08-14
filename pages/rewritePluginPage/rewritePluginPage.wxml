@@ -1,7 +1,0 @@
-<!-- 自定义导航 -->
-<view class="a" wx:if="{{flag}}">
-   
-    <view class="" style="height: calc(100vh - {{statusBarHeight}}px)">
-        <chat bind:queryCallback="getQueryCallback" bind:backHome="goBackHome" generic:textMessage="customTextMessage" generic:weatherMessage="customWeatherMessage" generic:imageMessage="customImageMessage" generic:guideCard="customGuideCard" generic:queryMessage="customQueryMessage" generic:operateCard="customoperateCard" generic:musicMessage="customMusicMessage" generic:newsMessage="customNewsMessage" generic:unsupportedMessage="customUnsupportedMessage" generic:miniprogramMessage="customMiniprogramMessage" generic:h5Message="customh5Message"></chat>
-    </view>
-</view>

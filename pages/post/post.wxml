@@ -1,0 +1,11 @@
+<import src="post-item/post-item-tpl.wxml" />
+<view class="">
+	<swiper autoplay="{{ true }}" interval="6000" circular="{{ true }}" indicator-dots="true">
+		<swiper-item class="imgItem" item-id="" wx:for="{{ imglist }}" wx:key="{{ index }}">
+			<image src="{{ item }}" alt="" />
+		</swiper-item>
+	</swiper>
+</view>
+<block wx:for="{{ postList }}" wx:key="{{ index }}">
+	<template is="postItemTpl" data="{{ item }}"></template>
+</block>

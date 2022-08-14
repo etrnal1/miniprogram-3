@@ -1,0 +1,19 @@
+<template name="postItemTpl">
+	<view class="post-container">
+		<view class="post-author-date">
+			<image model="scaleToFill" style="border-radius: 40px;" src="{{ item.avatar }}" />
+			<text>{{item.date}}</text>
+		</view>
+		<text class="post-title">{{item.title}}</text>
+		<!-- aspectFit -->
+		<image src="{{ item.postImg }}" class="post-image" model="top" />
+		<text class="post-artitle">{{item.content}}</text>
+	</view>
+	<view>
+		<text>{{readingNum}}</text>
+		|
+		<text>{{commentNum}}</text>
+		|
+		<text>{{collectionNum}}</text>
+	</view>
+</template>

@@ -199,8 +199,14 @@ swipe
 - Autoplay
 - interval="3000"  设置时间为3000 毫秒
 
-```
-
+```js
+<view>
+	<swiper autoplay="{{ true }}" interval="2000" circular="{{ true }}">
+		<swiper-item class="imgItem" item-id="" wx:for="{{ imglist }}" wx:key="{{ index }}">
+			<image src="{{ item }}" alt="" />
+		</swiper-item>
+	</swiper>
+</view>
 ```
 
 ### 封装request
@@ -566,3 +572,123 @@ App({
 #### 输出参数
 
 ![Snipaste_2022-08-07_21-04-54](F:\miniprogram-3\images\Snipaste_2022-08-07_21-04-54.png)
+
+```
+保存预览一下，文章图片好像并没有发生任何变化。这是因为scaleToFill模式是缩放的默认模式，如果缺省了mode，则小程序也会以scaleToFill的模式来缩放图片。scaleToFill模式将改变图片的高宽比，强行让图片更改为样式指定的尺寸，使图片变形（如果原始图片的宽高比例和要缩放的目标宽高比例相同，则不会变形，只是整体上放大或者缩小了）。
+```
+
+### onShow
+
+页面执行了onShow 函数后，逻辑层收到一个通知(Notify);逻辑层会以json的形式发送到View视图层,
+
+视图层接收初始化数据后，开始渲染初始化数据，最后将数据呈现在开发者的眼前
+
+"{{avatar}}" 一定在{{}}上加上双引号，否则小程序会报错
+
+#### 数据绑定更新
+
+```
+setData 函数来数据绑定,立即为数据更新
+使用this.setData的方式来调用这个方法
+this.setDat 会改变this.data变量相同的key 值
+setData执行后会通知逻辑层执行Rerender,并立刻重新渲染视图。
+
+```
+
+#### 页面加载执行
+
+
+
+````js
+  onLoad(options) {
+      this.setData({
+        title:"一根雪糕的经济原理"
+      })
+      console.log("onLoad:  一根雪糕的经济原理")
+  },
+````
+
+件是视图层（wxml）到逻辑层（js）的通信方式。简单一些理解，事件可以让我们在js里处理一些用户在界面上的一些操作并对这些操作做出反馈。比如点击welcome页面“开启小程序之旅”按钮后，需要在js里调用MINA框架的API，使页面从welcome跳转到post
+
+• 在组件上注册事件。注册事件将告诉小程序，我们要监听哪个组件的什么事件。在本例中，需要监听“开启小程序之旅”这个组件的tap事件。• 在js中编写事件处理函数响应事件。也就是说，监听到事件后，需要编写自己的业务。在本例中，我们将调用MINA框架的导航API，让welcome页面跳转到post页面。 
+
+#### 绑定事件
+
+```
+    <!-- 监听时间 执行 -->
+<view catchtap="onTapJump" class="Journey-container">
+		<text>开启小程序之旅</text>
+	</view>
+```
+
+
+
+```
+onTapJump(event){
+    wx.redirectTo({
+      url:"../post/post",
+      success:function(){
+        console.log("jump success")
+      }
+
+    })
+  },
+```
+
+ wx.redirectTo• 
+
+wx.navigateTo• 
+
+wx.switchTap(122100版本新增)
+
+redirectTo将关闭当前页面，跳转到指定页面；navigateTo将保留当前页面，跳转到指定页面；而switchTap只能用于跳转到带tabbar的页面，并关闭其他所有非tabBar页面。
+
+
+
+wx.navigateTo。保存运行代码后将发现，navigateTo跳转到post页面后，页面左上角有一个返回按钮
+
+小程序最多只能有5层页面
+
+### 缓存的应用
+
+
+
+模板是小程序中的重点和难点，它将大幅度地提高代码的复用性与可维护性，避免开发者编写重复的代码
+
+
+
+缓存的应用也是小程序中的一个特色，开发者的很多业务都需要借助缓存来实现，比如用户的令牌、城市列表数据等都可以写入小程序的缓存中。
+
+
+
+本章我们还分别尝试使用ES5和ES6语法编写“数据库”访问类，开发者可以自行体会一下ES6编写Class的优越性
+
+
+
+
+
+
+
+### 小程序的模板块
+
+小程序只能将wxml 封装,无法将模版的业务逻辑(js)封装起来
+
+使用模版，然后再新建模版文件在/pages/post 新建目录 post-item 作为模版文件模流，新建文件
+
+post-item-tpl.wxml
+
+post-item-tpl.wxss
+
+模版相关内容被包括在<template></template>标签内，使用name 属性指定模版名
+
+```
+<import src="post-item/post-item-tol.wxml"/>
+```
+
+template的is属性指定要使用哪个模板，这里我们当然要使用postItemTpl这个模板
+
+通过template的data属性，可以向template传递数据。这里将wx：for得到的item传入到template里，这样就可以在template内部使用这个item了。要注意的是，向模板里传入数据，同样要使用{{}}的数据绑定语法，比如data={{item}}。
+
+不依赖item
+
+{{...item}}可以将item这个对象展开。展开之后再传入到template里，就可以保证template不再依赖item这个变量名。
