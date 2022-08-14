@@ -571,6 +571,7 @@ App({
 
 #### 输出参数
 
+<<<<<<< HEAD
 ![Snipaste_2022-08-07_21-04-54](F:\miniprogram-3\images\Snipaste_2022-08-07_21-04-54.png)
 
 ```
@@ -692,3 +693,6 @@ template的is属性指定要使用哪个模板，这里我们当然要使用post
 不依赖item
 
 {{...item}}可以将item这个对象展开。展开之后再传入到template里，就可以保证template不再依赖item这个变量名。
+=======
+![Snipaste_2022-08-07_21-04-54](\miniprogram-3\images\Snipaste_2022-08-07_21-04-54.png)
+>>>>>>> 7366887aa5635afbf129ff470e0c41b9d4e47479
