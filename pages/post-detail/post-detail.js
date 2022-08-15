@@ -1,27 +1,37 @@
 // pages/post-detail/post-detail.js
-var DBPost=require("../../db/DBPost.js").DBPost;
+// var DBPost=require("../../db/DBPost.js").DBPost;
+import { DBPost } from '../../db/DBPost.js';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+  
     post:''
   },
 
   /**
    * 生命周期函数--监听页面加载
+   * 实例化PostId,使用this.dbPost即可引用这个对象
    */
   onLoad(options) {
-      console.log('---------')
-      console.log(options)
-      console.log('---------')
-      // var postId=options.id;
-      // this.dbPost=new DBPost(postId);
-      // this.postDataa=this.dbPost.getPostItemById().data;
-      // this.setData({
-      //   post:this.postData
-      // })
+
+     
+      var postId=options.id;
+      console.log("文章id: "+postId)
+      var dbPost=new DBPost();
+      
+      var func=dbPost.test();
+      //var postData=this.dbPost.getPostItemById();
+      console.log(dbPost)
+      console.log("----------下面为函数方法---------------")
+      console.log(func)
+      // // ///存储数据
+      //  this.setData({
+      //    post:this.postData
+      //  })
+
   },
 
   /**

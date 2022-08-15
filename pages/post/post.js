@@ -6,30 +6,22 @@
 // 将模块引入post.js 中，模块对象赋值给dataObj
 //引用文件扩展名js 不能用绝对路径 只在该文件使用
 // var dataObj=require("../../data/data.js")
-var DBPost=require("../../db/DBPost.js").DBPost;
+import { DBPost } from '../../db/DBPost.js';
+//var DBPost=require("../../db/DBPost.js").DBPost;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-   
+    postList:'',
     imglist:[
       "https://scpic.chinaz.net/files/pic/pic9/202101/apic30145.jpg",
       "https://scpic.chinaz.net/files/pic/pic9/202009/apic27858.jpg",
       "https://scpic.chinaz.net/files/pic/pic9/201803/wpic078.jpg"
     ]
   },
-  onTapToDetail:function(event){
-    var postId=event.currentTarget.dataset.postId;
-    console.log(event)
-    wx.navigateTo({
-      url:"../post-detail/post-detail?id="+postId,
-      //url: '../post/post-detail/post-detail',
-    })
-    console.log('-----跳转成功'+postId)
-  },
-
+ 
   /**
    * 生命周期函数--监听页面加载
    * 页面只会调一次
@@ -48,6 +40,15 @@ Page({
       })
 
       console.log("onLoad:  "+this.postList)
+  },
+  onTapToDetail:function(event){
+    var postId=event.currentTarget.dataset.postId;
+    console.log('跳转详情页')
+  // 跳转到详情页
+    wx.navigateTo({
+      url:"../post-detail/post-detail?id="+postId,
+      
+    });
   },
 
   /**

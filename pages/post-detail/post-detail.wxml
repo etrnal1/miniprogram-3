@@ -1,7 +1,7 @@
 <!--pages/post-detail/post-detail.wxml-->
 <view class="container">
 	<image />
-	<text></text>
+	<text>hello</text>
 	<view>
 		<view>
 			<view>

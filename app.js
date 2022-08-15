@@ -7,7 +7,7 @@ App({
         if(!storageData){
             console.log('clear data')
             var dataObj=require("data/data.js")
-            wx.clearStorageSync();
+           // wx.clearStorageSync();
             wx.setStorageSync('postList', dataObj.postList)
            
          console.log('save data success')

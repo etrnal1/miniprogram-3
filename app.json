@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/post-detail/post-detail",
+  
     "pages/weclome/weclome",
-    
-    "pages/post/post"
+    "pages/post/post",
+    "pages/post-detail/post-detail"
 
    
      
