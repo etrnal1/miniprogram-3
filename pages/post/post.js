@@ -20,6 +20,15 @@ Page({
       "https://scpic.chinaz.net/files/pic/pic9/201803/wpic078.jpg"
     ]
   },
+  onTapToDetail:function(event){
+    var postId=event.currentTarget.dataset.postId;
+    console.log(event)
+    wx.navigateTo({
+      url:"../post-detail/post-detail?id="+postId,
+      //url: '../post/post-detail/post-detail',
+    })
+    console.log('-----跳转成功'+postId)
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -62,6 +71,7 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide() {
+    wx.clearStorageSync();
     console.log("onHide:页面被隐藏")
 
   },

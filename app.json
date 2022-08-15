@@ -2,7 +2,9 @@
   "pages": [
 
     "pages/weclome/weclome",
+    "pages/post-detail/post-detail",
     "pages/post/post"
+
    
      
   ],

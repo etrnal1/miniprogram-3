@@ -2,12 +2,12 @@
 App({
     onLaunch:function(){
         var storageData=wx.getStorageSync('postList');
-        wx.clearStorageSync();
+       // wx.clearStorageSync();
         console.log(storageData)
         if(!storageData){
             console.log('clear data')
             var dataObj=require("data/data.js")
-           // wx.clearStorageSync();
+            wx.clearStorageSync();
             wx.setStorageSync('postList', dataObj.postList)
            
          console.log('save data success')

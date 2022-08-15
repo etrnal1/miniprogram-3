@@ -6,12 +6,12 @@ DBPost.prototype={
         var res=wx.getStorageSync(this.storageKeyName);
         if(!res){
             res=require('../data/data.js').postList;
-            this.execSetStorageSync(res);
+            this.SetStorageSync(res);
         }
         return res
     },
-    execSetStorageSync:function(data){
-        wx.execSetStorageSync(this.storageKeyName,data)
+    SetStorageSync:function(data){
+        wx.SetStorageSync(this.storageKeyName,data)
     }
 };
 module.exports ={

@@ -1,6 +1,8 @@
 // 页面数据,小程序制作的一个模块
+// 数据文件
 var postList=[{
     data:'2022/08/14',
+    postId:1,
     title:'一根冰棍的经济',
     postImg:'https://img.zcool.cn/community/0135d65d80573fa8012060be905395.jpg@1280w_1l_2o_100sh.jpg',
     avatar:"https://img.zcool.cn/community/0135d65d80573fa8012060be905395.jpg@1280w_1l_2o_100sh.jpg",
@@ -12,6 +14,7 @@ var postList=[{
 
 {
     data:'2022/08/14',
+    postId:2,
     title:'日本经济倒退的二十年',
     postImg:'https://www.keaidian.com/uploads/allimg/190603/03163328_2.jpg',
     avatar:"https://www.keaidian.com/uploads/allimg/190603/03163328_2.jpg",
@@ -22,7 +25,41 @@ var postList=[{
 },
 {
     data:'2022/08/14',
+    postId:3,
     title:'一根冰棍的经济',
+    postImg:'https://img.zcool.cn/community/0135d65d80573fa8012060be905395.jpg@1280w_1l_2o_100sh.jpg',
+    avatar:"https://img.zcool.cn/community/0135d65d80573fa8012060be905395.jpg@1280w_1l_2o_100sh.jpg",
+    content:"这是盐的味道，山的味道，风的味道，阳光的味道，也是时间的味道，人情的味道。这些味道，已经在漫长的时光中和故土、乡亲、念旧、勤俭、坚忍等等情感和信念混合在一起,才下舌尖，又上心间，让我们几乎分不清哪一个是滋味，哪一种是情怀。",
+    readingNum:9,
+    collectionNum:0,
+    commentNum:0
+},
+{
+    data:'2022/08/14',
+    postId:4,
+    title:'二根冰棍的经济',
+    postImg:'https://img.zcool.cn/community/0135d65d80573fa8012060be905395.jpg@1280w_1l_2o_100sh.jpg',
+    avatar:"https://img.zcool.cn/community/0135d65d80573fa8012060be905395.jpg@1280w_1l_2o_100sh.jpg",
+    content:"这是盐的味道，山的味道，风的味道，阳光的味道，也是时间的味道，人情的味道。这些味道，已经在漫长的时光中和故土、乡亲、念旧、勤俭、坚忍等等情感和信念混合在一起,才下舌尖，又上心间，让我们几乎分不清哪一个是滋味，哪一种是情怀。",
+    readingNum:9,
+    collectionNum:0,
+    commentNum:0
+},
+{
+    data:'2022/08/14',
+    postId:5,
+    title:'三根冰棍的经济',
+    postImg:'https://img.zcool.cn/community/0135d65d80573fa8012060be905395.jpg@1280w_1l_2o_100sh.jpg',
+    avatar:"https://img.zcool.cn/community/0135d65d80573fa8012060be905395.jpg@1280w_1l_2o_100sh.jpg",
+    content:"这是盐的味道，山的味道，风的味道，阳光的味道，也是时间的味道，人情的味道。这些味道，已经在漫长的时光中和故土、乡亲、念旧、勤俭、坚忍等等情感和信念混合在一起,才下舌尖，又上心间，让我们几乎分不清哪一个是滋味，哪一种是情怀。",
+    readingNum:9,
+    collectionNum:0,
+    commentNum:0
+},
+{
+    data:'2022/08/14',
+    postId:6,
+    title:'四根冰棍的经济',
     postImg:'https://img.zcool.cn/community/0135d65d80573fa8012060be905395.jpg@1280w_1l_2o_100sh.jpg',
     avatar:"https://img.zcool.cn/community/0135d65d80573fa8012060be905395.jpg@1280w_1l_2o_100sh.jpg",
     content:"这是盐的味道，山的味道，风的味道，阳光的味道，也是时间的味道，人情的味道。这些味道，已经在漫长的时光中和故土、乡亲、念旧、勤俭、坚忍等等情感和信念混合在一起,才下舌尖，又上心间，让我们几乎分不清哪一个是滋味，哪一种是情怀。",
