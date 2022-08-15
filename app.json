@@ -1,8 +1,8 @@
 {
   "pages": [
-
-    "pages/weclome/weclome",
     "pages/post-detail/post-detail",
+    "pages/weclome/weclome",
+    
     "pages/post/post"
 
    

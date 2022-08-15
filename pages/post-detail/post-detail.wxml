@@ -1,2 +1,15 @@
 <!--pages/post-detail/post-detail.wxml-->
-<text>pages/post-detail/post-detail.wxml</text>
+<view class="container">
+	<image />
+	<text></text>
+	<view>
+		<view>
+			<view>
+				<image />
+				<text></text>
+			</view>
+			<text></text>
+		</view>
+	</view>
+	<text></text>
+</view>

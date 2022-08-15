@@ -1,18 +1,27 @@
 // pages/post-detail/post-detail.js
+var DBPost=require("../../db/DBPost.js").DBPost;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    post:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+      console.log('---------')
+      console.log(options)
+      console.log('---------')
+      // var postId=options.id;
+      // this.dbPost=new DBPost(postId);
+      // this.postDataa=this.dbPost.getPostItemById().data;
+      // this.setData({
+      //   post:this.postData
+      // })
   },
 
   /**
