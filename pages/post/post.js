@@ -5,7 +5,8 @@
 //MINA
 // 将模块引入post.js 中，模块对象赋值给dataObj
 //引用文件扩展名js 不能用绝对路径 只在该文件使用
-var dataObj=require("../../data/data.js")
+// var dataObj=require("../../data/data.js")
+var DBPost=require("../../db/DBPost.js").DBPost;
 Page({
 
   /**
@@ -25,13 +26,19 @@ Page({
    * 页面只会调一次
    */
   onLoad:function() {
+    // old data
+      // this.setData({
+      //   postList:dataObj.postList
+       
+      // })
+      // new data
+      var dbPost=new DBPost();
       this.setData({
-        postList:dataObj.postList
+        postList:dbPost.getAllPostData()
        
       })
-     
 
-      // console.log("onLoad:  一根雪糕的经济原理")
+      console.log("onLoad:  "+this.postList)
   },
 
   /**

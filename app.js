@@ -1,3 +1,19 @@
+
+App({
+    onLaunch:function(){
+        var storageData=wx.getStorageSync('postList');
+        wx.clearStorageSync();
+        console.log(storageData)
+        if(!storageData){
+            console.log('clear data')
+            var dataObj=require("data/data.js")
+           // wx.clearStorageSync();
+            wx.setStorageSync('postList', dataObj.postList)
+           
+         console.log('save data success')
+        }
+    }
+})
 // //wx8c631f7e9f2465e1
 // var plugin = requirePlugin("myPlugin");
 // App({

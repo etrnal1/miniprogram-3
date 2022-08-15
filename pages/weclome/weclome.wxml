@@ -1,8 +1,8 @@
 <view class="container">
 	<image />
-	<text style="font-size:19px;">hello 橘子罐头</text>
+	<text style="font-size:49rpx;" user-select="true">hello 橘子罐头</text>
 	<!-- 监听时间 执行onTapjump 函数 -->
-	<view catchtap="onTapJump" class="Journey-container">
-		<text>开启小程序之旅</text>
+	<view catchtap="onTapJump" class="Journey-container" user-select="true">
+		<text style="font-size:35rpx;">开启小程序之旅</text>
 	</view>
 </view>
