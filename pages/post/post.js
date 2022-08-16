@@ -41,6 +41,12 @@ Page({
 
       console.log("onLoad:  "+this.postList)
   },
+  onCommentTap:function(event){
+    var id=event.currentTarget.dataset.postId;
+    wx.navigateTo({
+      url:"../post-comment/post-comment?id="+postId,
+    })
+  },
   onTapToDetail:function(event){
     var postId=event.currentTarget.dataset.postId;
     console.log('跳转详情页')

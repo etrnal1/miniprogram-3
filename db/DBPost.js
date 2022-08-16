@@ -43,7 +43,46 @@ class DBPost{
         console.log("数据为____"+res)
         return res;
     }
-   
+    getCommentData(){
+        
+        console.log('测试页面评论功能----————')
+    }
+    up(){
+        var data=this.updatePostData('up');
+        return data;
+    }
+    updatePostData(category){
+
+        var itemData=this.getPostItemById(),
+        postData=itemDataa.data,
+        allPostData=this.getAllPostData();
+        switch(category){
+            case 'collect':
+                if(!postData.collectionStatus){
+                    postData.collectionNum++;
+                    postData.collectionStatus=true;
+                }else{
+                    postData.collectionNum--;
+                    postData.collectionStatus=false;
+                }
+                break;
+            case 'up':
+                if(!postData.upStatus){
+                    postData.collectionNum++;
+                    postData.upStatus=true;
+                }else{
+                    postData.collectionNum++;
+                    postData.upStatus=false;
+                }
+                break;
+                default:
+                    break;
+        }
+        allPostData[itemData.index]=postData;
+        this.execSetStorageSync(allPostData);
+        return postData;
+
+    }
     execSetStorageSync(data){
         wx.setStorageSync(this.storageKeyName,data);
     }

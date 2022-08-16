@@ -3,7 +3,8 @@
   
     "pages/weclome/weclome",
     "pages/post/post",
-    "pages/post-detail/post-detail"
+    "pages/post-detail/post-detail",
+    "pages/post-comment/post-comment"
 
    
      
@@ -14,8 +15,8 @@
   
   "window": {
    
-    "navigationBarBackgroundColor": "#4A6141",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#4A6141"
+   
   },
   
 

@@ -7,10 +7,28 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
-    post:''
+    post:'',
+    collectionStatus:''
   },
+  test(){
+    console.log('测试点赞功能')
+    wx.showToast({
+      'title':'点赞成功',
+      duration:1000,
+      icon:"success",
+      mask:true
 
+    })
+    this.setData({
+      collectionStatus:true
+    })
+  },
+  onCommentTap(){
+    wx.navigateTo({
+      url:"../post-comment/post-comment",
+    })
+    console.log('跳转评论页面')
+  },
   /**
    * 生命周期函数--监听页面加载
    * 实例化PostId,使用this.dbPost即可引用这个对象
@@ -26,12 +44,13 @@ Page({
       var postData=dbPost.getPostItemById(postId);
      // console.log(dbPost)
      // console.log("----------下面为函数方法---------------")
-      console.log(func)
-      console.log(postData)
+      //console.log(func)
+     // console.log(postData)
       //存储数据
        this.setData({
-         post:postData
+         post:postData.data
        })
+       console.log(this.data.post)
 
   },
 
@@ -39,9 +58,22 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-
+    console.log('----------*****')
+    console.log(this.postData)
+    console.log('----------*****')
+    wx.setNavigationBarTitle({
+     
+      title: this.data.post.title,
+      success: (result)=>{
+        console.log('设置标题成功')
+      },
+      fail: ()=>{
+        console.log('设置标题失败')
+      },
+      complete: ()=>{}
+    });
   },
-
+ 
   /**
    * 生命周期函数--监听页面显示
    */

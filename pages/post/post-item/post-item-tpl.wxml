@@ -7,7 +7,7 @@
 		<text class="post-title" user-select="false">{{item.title}}</text>
 		<!-- aspectFit -->
 		<image src="{{ item.postImg }}" class="post-image" model="top" />
-		<text class="post-artitle" user-select="true">{{item.content}}</text>
+		<text class="post-artitle" user-select="true" style="margin-top:40rpx">{{item.content}}</text>
 	</view>
 	<view>
 		<text user-select="false">{{readingNum}}</text>

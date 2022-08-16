@@ -8,8 +8,9 @@ var postList=[{
     avatar:"https://img.zcool.cn/community/0135d65d80573fa8012060be905395.jpg@1280w_1l_2o_100sh.jpg",
     content:"不管是否情愿，生活总在催促我们迈步向前。人们整装、启程、跋涉、落脚，停在哪里，哪里就会燃起灶火。从个体生命的迁徙，到食材的交流运输，从烹调方法的演变，到人生命运的流转，人和食物的匆匆脚步，从来不曾停歇。”——《舌尖上的中国》",
     readingNum:9,
-    collectionNum:0,
-    commentNum:0,
+    collectionNum:10,
+    commentNum:1,
+    collectionStatus:1,
     author:"林小白",
     dateTime:"24小时之前"
 },

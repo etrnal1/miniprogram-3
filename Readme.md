@@ -771,3 +771,48 @@ event事件对象是由MINA框架在调用onTapToDetail函数时传递的参数�
 
 var DBPost=require("../../db/DBPost.js").DBPost;
 
+flex-direction: column   display: flex; flex-direction: column 意思是**盒布局**，并且该布局内部的子控件排列方式是纵向排列
+
+```
+ display: flex;
+    flex-direction: column;
+    margin-top: 15rpx;
+    margin-right: 30rpx;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 15px;
+```
+
+很多时候都会面临如何将两个元素垂直居中对齐的问题
+
+
+
+以上代码摘自post-detail.wxss。解决思路如下：将avatar和author用一个容器包裹起来(author-box)，使用display:flex将该容器设置为flex盒子模型，使用flex-direction:row指定flex的方向为row
+
+
+
+关键的代码是align-items:center，这将使flex盒子里的元素在交叉轴方向上居中。在本例中主轴是水平方向（因为设置了flex-direction为row），所以交叉轴是垂直方向，align-items:center将控制垂直方向居中。关于flex及轴的概念已经在
+
+
+
+welcome页面中是如何使头像、文字和按钮这3个元素水平居中的。welcome页面中设置了flex-direction：column，所以主轴是垂直方向，align-items:center将控制水平方向上的居中
+
+
+
+ "window": {
+
+   
+
+​    "navigationBarBackgroundColor": "#4A6141",
+
+​    "navigationBarTextStyle": "white",
+
+​    "navigationBarTitleText": "小程序起步"
+
+  },
+
+### 设置属性
+
+console.log(this.data.post)
+
+第7章　收藏、评论、点赞与计数功能

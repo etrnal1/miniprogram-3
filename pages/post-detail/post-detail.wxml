@@ -1,12 +1,33 @@
 <!--pages/post-detail/post-detail.wxml-->
-<view  wx:for="{{post}}" wx:key="index">
-	<text>{{item.title}}</text>
-	<text> 作者  :{{item.author}}</text>
-	<view>
-	<text>{{item.data}}</text>
+<view  class="container">
+	
+	<image src="{{post.postImg}}" class="head-image" />
+
+	<text class="title">{{post.title}}</text>
+	<view class="author-date">
+		<view class="author-box">
+			<image></image>
+			<text class="author">{{post.author}}</text>
+		</view>	
+	<text class="dates" >{{post.dateTime}}</text>
+	
 	</view>
-	<view>
-		<image src="{{item.postImg}}" />
+	
+<text class="detail">{{post.content}}</text>
+</view>
+<!---/* 图片评论区 */------------->
+<view class="tool">
+	<view class="tool-item">
+	<image src="../../img/04.jpg"></image>
+	<text>{{post.readingNum}}</text>
 	</view>
-	<text>{{item.content}}</text>
+	<view class="tool-item comment" catchtap="onCommentTap">
+	<image src="../../img/03.jpg"></image>	
+	<text>{{post.commentNum}}</text>
+	</view>
+	<view class="tool-item" catchtap="test">
+	<image src="../../img/02.jpg" wx:if="{{post.collectionStatus}}"></image>
+	<image wx:else src="../../img/01.jpg" ></image>
+	<text>{{post.collectionNum}}</text>	
+	</view>
 </view>
