@@ -6,18 +6,21 @@ class DBPost{
         this.postId=this.postId;
        
     }
-    test(){
-        console.log('this is test data')
+    test(postId){
+        console.log('************-----')
+        console.log(postId)
+        console.log('************-----')
     }
+        
     /**
      * 根据id 获取文章信息
      * @returns 
      */
-    getPostItemById(){
+    getPostItemById(postId){
         var postsData=this.getAllPostData();
         var len=postsData.length;
         for(var i=0;i<len;i++){
-            if(postsData[i].postId==this.postId){
+            if(postsData[i].postId==postId){
               
                 return {
                     index:i,
@@ -35,7 +38,7 @@ class DBPost{
         var res=wx.getStorageSync(this.storageKeyName);
         if(!res){
             res=require('../data/data.js').postList; 
-            //this.initPostList(res) ;
+            this.execSetStorageSync(res) ;
         }
         console.log("数据为____"+res)
         return res;

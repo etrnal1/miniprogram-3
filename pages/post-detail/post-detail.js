@@ -22,15 +22,16 @@ Page({
       console.log("文章id: "+postId)
       var dbPost=new DBPost();
       
-      var func=dbPost.test();
-      //var postData=this.dbPost.getPostItemById();
-      console.log(dbPost)
-      console.log("----------下面为函数方法---------------")
+      var func=dbPost.test(postId);
+      var postData=dbPost.getPostItemById(postId);
+     // console.log(dbPost)
+     // console.log("----------下面为函数方法---------------")
       console.log(func)
-      // // ///存储数据
-      //  this.setData({
-      //    post:this.postData
-      //  })
+      console.log(postData)
+      //存储数据
+       this.setData({
+         post:postData
+       })
 
   },
 

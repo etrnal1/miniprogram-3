@@ -1,15 +1,12 @@
 <!--pages/post-detail/post-detail.wxml-->
-<view class="container">
-	<image />
-	<text>hello</text>
+<view  wx:for="{{post}}" wx:key="index">
+	<text>{{item.title}}</text>
+	<text> 作者  :{{item.author}}</text>
 	<view>
-		<view>
-			<view>
-				<image />
-				<text></text>
-			</view>
-			<text></text>
-		</view>
+	<text>{{item.data}}</text>
 	</view>
-	<text></text>
+	<view>
+		<image src="{{item.postImg}}" />
+	</view>
+	<text>{{item.content}}</text>
 </view>
