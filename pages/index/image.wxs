@@ -1,5 +1,0 @@
-// wxs 图片处理函数
-function img_conv(){
-    console.log('23')
-}
-module.exports = img_conv

@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "chat": "plugin://chatbot/chat",
-    "customTextMessage": "../components/components/customTextMessage/customTextMessage"
-  }
-}

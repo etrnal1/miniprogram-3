@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "van-button": "@vant/weapp/button/index"
-  },
-  "navigationBarTitleText": "个人信息"
-}

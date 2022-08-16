@@ -1,4 +1,0 @@
-{
-  "usingComponents": {"van-picker": "@vant/weapp/picker/index"},
-  "navigationBarTitleText": "个人信息"
-}
