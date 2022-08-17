@@ -8,52 +8,76 @@ Page({
    */
   data: {
     post:'',
-    collectionStatus:''
+    collectionStatus:'',
+    dbPost:''
   },
-  test(){
-    console.log('测试点赞功能')
-    wx.showToast({
-      'title':'点赞成功',
-      duration:1000,
-      icon:"success",
-      mask:true
 
-    })
-    this.setData({
-      collectionStatus:true
-    })
-  },
+ 
+ 
   onCommentTap(){
-    wx.navigateTo({
-      url:"../post-comment/post-comment",
+    wx.showToast({
+      title:"测试评论事件"
     })
-    console.log('跳转评论页面')
+    // wx.navigateTo({
+    //   url:"../post-comment/post-comment",
+    // })
+    // console.log('跳转评论页面')
   },
+  
   /**
    * 生命周期函数--监听页面加载
    * 实例化PostId,使用this.dbPost即可引用这个对象
    */
   onLoad(options) {
-
-     
       var postId=options.id;
       console.log("文章id: "+postId)
       var dbPost=new DBPost();
       
       var func=dbPost.test(postId);
       var postData=dbPost.getPostItemById(postId);
-     // console.log(dbPost)
-     // console.log("----------下面为函数方法---------------")
-      //console.log(func)
-     // console.log(postData)
       //存储数据
        this.setData({
-         post:postData.data
+         post:postData.data,
+         dbPost:dbPost
        })
        console.log(this.data.post)
 
   },
+   /**
+   * 文章点赞功能
+   * @param {*} event 
+   */
+    onUpTap:function(event){
+      // wx.showToast({
+      //   'title':'测试转发事件'
+      // })
+      var newData=this.data.dbPost.collect();
+      console.log(newData)
+      // var newData=this.dbPost.up();
+      // this.setData({
+      //   'post.upStatus':newDaata.upStatus,
+      //   'post.upNum':newData.upNum
+      // })
+    }
+    ,
+  test(event){
+    var newData=this.dbPost.collect();
+    console.log(newData)
+    // wx.showToast({
+    //   title:"测试转发事件"
+    // })
+    // console.log('测试收藏事件')
+    // wx.showToast({
+    //   'title':'点赞成功',
+    //   duration:1000,
+    //   icon:"success",
+    //   mask:true
 
+    // })
+    // this.setData({
+    //   collectionStatus:true
+    // })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -13,19 +13,19 @@
 	
 	</view>
 	
-<text class="detail">{{post.content}}</text>
+<text class="detail" >{{post.content}}</text>
 </view>
 <!---/* 图片评论区 */------------->
-<view class="tool">
-	<view class="tool-item">
+<view class="tool" style="margin-top:-130rpx">
+	<view class="tool-item" catchtap="onUpTap" data-post-id="{{post.postId}}">
 	<image src="../../img/04.jpg"></image>
 	<text>{{post.readingNum}}</text>
 	</view>
-	<view class="tool-item comment" catchtap="onCommentTap">
+	<view class="tool-item comment" catchtap="onCommentTap" data-post-id="{{post.postId}}">
 	<image src="../../img/03.jpg"></image>	
 	<text>{{post.commentNum}}</text>
 	</view>
-	<view class="tool-item" catchtap="test">
+	<view class="tool-item" catchtap="test" data-post-id="{{post.postId}}">
 	<image src="../../img/02.jpg" wx:if="{{post.collectionStatus}}"></image>
 	<image wx:else src="../../img/01.jpg" ></image>
 	<text>{{post.collectionNum}}</text>	
