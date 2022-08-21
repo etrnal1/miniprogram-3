@@ -817,3 +817,65 @@ console.log(this.data.post)
 
 第7章　收藏、评论、点赞与计数功能
 稳定更新于2022年8月18日
+
+
+
+### css  样式
+
+#### margin
+
+```css
+margin 
+#padding 简写属性在一个声明中设置所有内边距属性。上右下左
+padding: 20rpx 0;
+display: flex;  #display 属性规定元素应该生成的框的类型
+#Flexbox 是 flexible box 的简称（注：意思是“灵活的盒子容器”），是 CSS3 引入的新的布局模式。它决定了元素如何在页面上排列，使它们能在不同的屏幕尺寸和设备下可预测地展现出来。
+//设置 p 元素的 4 个外边距： 
+
+    上外边距是 10px
+    右外边距是 5px
+    下外边距是 15px
+    左外边距是 20px
+这个简写属性设置一个元素所有外边距的宽度，或者设置各边上外边距的宽度。
+
+块级元素的垂直相邻外边距会合并，而行内元素实际上不占上下外边距。行内元素的的左右外边距不会合并。同样地，浮动元素的外边距也不会合并。允许指定负的外边距值，不过使用时要小心
+
+p
+  {
+  margin:2cm 4cm 3cm 4cm;
+  }
+margin:20rpx 35rpx 35rpx 35rpx
+line-height: 65rpx;  #line-height 属性设置行间的距离（行高）。
+background-color: #fff;
+
+margin-bottom: 20px; # 下外边距
+align-items: center;
+ flex-direction: row; #flex-direction 属性规定弹性项目的方向。  	作为列，垂直地显示弹性项目。 默认值。作为一行，水平地显示弹性项目。
+```
+
+微信选择照片类型
+
+```
+#直接打开相册; 直接打开相机进行拍照
+sourceType: ['album','camera'],
+```
+
+#### success成功会返回 res 参数
+
+```css
+wx.chooseImage({
+      count: 9,
+      sizeType: ['original','compressed'],
+      sourceType: ['album','camera'],
+      success: (res)=>{
+        console.log(res.tempFilePaths)
+        this.setData({
+		//图片的临时地址
+          chooseFiles:res.tempFilePaths
+        })
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
+```
+

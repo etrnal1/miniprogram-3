@@ -1,3 +1,48 @@
-<view>
-评论页面
+<view class="input-box" hover-class="none" hover-stop-propagation="false">
+	<view class="send-msg-box">
+		<!-- 按住说话 录音输入框 使用uesKeyboardFlag 来控制和显示是否隐藏   -->
+		<view hidden="{{ useKeyboradFlag }}" class="input-item">
+			<input type="text" disabled="disabled" catchtap="switchInputType" value="按住说话" />
+		</view>
+		<!-- 描写内容 键盘输入框-->
+		<!-- input 事件 bindchange bindblur bindconfirm -->
+		<!-- binblur 点击回车 触发 -->
+		<!-- 建议使用bindconfirm 事件作为input的确定事件 -->
+		<!--  -->
+		<view class="" hover-class="none" hover-stop-propagation="false">
+			<input
+				type="text"
+				value="{{ keyboradInputVale }}"
+				bindinput="bindCommentInput"
+				bindconfirm="submitComment"
+				placeholder="说点什么吧........."
+			/>
+		</view>
+		<!-- 点击发送 实现评论内容的发送功能 -->
+		<view class="" hover-class="none" hover-stop-propagation="false">
+			<view class="submit-btn" catchtap="submitComment">发送</view>
+		</view>
+	</view>
 </view>
+<!-- 评论发布图片 -->
+<view class="send-more-box" hover-class="none" hover-stop-propagation="false" style="margin-left:150px">
+	<view class="send-more-btns-main" hover-class="none" hover-stop-propagation="false">
+		<view class="more-btn-main" hover-class="none" hover-stop-propagation="false">
+			<image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+		</view>
+		<text class="" selectable="false" space="false" decode="false" bind:tap="chose">
+			照片片
+		</text>
+		<wx_icon class="remove-icon" type="cancel" size="25" color="#B2B2B2" />
+	</view>
+</view>
+<!-- 显示选择的照片 -->
+<!-- <view class="" hover-class="none" hover-stop-propagation="false">
+	<block wx:for="{{  }}">
+		<view class="" hover-class="none" hover-stop-propagation="false">
+			<view class="" hover-class="none" hover-stop-propagation="false">
+				<image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+			</view>
+		</view>
+	</block>
+</view> -->

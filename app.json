@@ -1,24 +1,36 @@
 {
   "pages": [
-  
     "pages/weclome/weclome",
     "pages/post/post",
     "pages/post-detail/post-detail",
-    "pages/post-comment/post-comment"
-
-   
-     
+    "pages/post-comment/post-comment",
+    "pages/movie/movie"   
   ],
   "plugins": {
 
   },
   
   "window": {
-   
-    "navigationBarBackgroundColor": "#4A6141"
-   
+    "navigationBarBackgroundColor": "#4A6141"  
   },
-  
+  "tabBar": {
+    "borderStyle":"black",
+    "selectedColor":"red",
+    "color":"purple",
+    "backgroundColor":"orange",
+    "position":"top",
+    "list":[
+      {
+      "pagePath":"pages/post/post",
+        
+      "text":"文字"
+      },
+     {
+      "pagePath":"pages/movie/movie",
+       "text":"光彩"
+    }
+  ]
+  },
 
   "usingComponents": {
     
